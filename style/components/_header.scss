@@ -1,26 +1,39 @@
 body {
-  background-color: black;
+  background-color: #0e0e0e;
 
   header {
     .header_container {
       max-width: 1440px;
       height: 100px;
       margin: 0 auto;
-      background-color: aqua;
+      background-color: #0e0e0e;
       display: flex;
       justify-content: center;
 
       .header_content {
         max-width: 1110px;
         width: 100%;
-        background-color: black;
+        background-color: #0e0e0e;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         nav ul {
           display: flex;
-          justify-content: center;
+
+          li {
+            margin-right: 50px;
+
+            a {
+              font-family: 'Manrope', 'Noto Sans Georgian', sans-serif;
+              font-size: 13px;
+              font-weight: 700;
+              line-height: 25px;
+              letter-spacing: 2px;
+              text-align: left;
+              color: white;
+            }
+          }
         }
       }
     }
@@ -31,5 +44,9 @@ body {
       margin: 0 auto;
       background-color: #979797;
     }
+
+    // .text_container:first {
+
+    // }
   }
 }

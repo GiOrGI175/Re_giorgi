@@ -152,32 +152,47 @@ button {
   font-family: "Noto Sans Georgian";
   src: url("../../essets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf");
 }
+@font-face {
+  font-family: "Manrope";
+  src: url("../../essets/fonts/Manrope-VariableFont_wght.ttf");
+}
 body {
-  font-family: "Noto Sans Georgian", sans-serif;
+  font-family: "Manrope", "Noto Sans Georgian", sans-serif;
 }
 
 body {
-  background-color: black;
+  background-color: #0e0e0e;
 }
 body header .header_container {
   max-width: 1440px;
   height: 100px;
   margin: 0 auto;
-  background-color: aqua;
+  background-color: #0e0e0e;
   display: flex;
   justify-content: center;
 }
 body header .header_container .header_content {
   max-width: 1110px;
   width: 100%;
-  background-color: black;
+  background-color: #0e0e0e;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 body header .header_container .header_content nav ul {
   display: flex;
-  justify-content: center;
+}
+body header .header_container .header_content nav ul li {
+  margin-right: 50px;
+}
+body header .header_container .header_content nav ul li a {
+  font-family: "Manrope", "Noto Sans Georgian", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: white;
 }
 body header .underline {
   width: 1110px;
