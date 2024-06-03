@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+
+  header {
+    .header_container {
+      max-width: 1440px;
+      height: 100px;
+      margin: 0 auto;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+
+      .header_content {
+        max-width: 1110px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav ul {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .underline {
+      width: 1110px;
+      width: 100%;
+      height: 1px;
+      margin: 0 auto;
+      background-color: #979797;
+    }
+  }
+}
