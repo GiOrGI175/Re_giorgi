@@ -218,6 +218,8 @@ body header section .container .text_container span {
   line-height: 19.12px;
   letter-spacing: 10px;
   text-align: left;
+  opacity: 0.5;
+  color: #fff;
 }
 body header section .container .text_container h2 {
   margin-bottom: 24px;
@@ -236,6 +238,8 @@ body header section .container .text_container p {
   font-weight: 500;
   line-height: 25px;
   text-align: left;
+  opacity: 0.75;
+  color: #fff;
 }
 body header section .container .text_container button {
   width: 160px;

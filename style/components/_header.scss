@@ -73,6 +73,8 @@ body {
             line-height: 19.12px;
             letter-spacing: 10px;
             text-align: left;
+            opacity: 0.5;
+            color: $main-bg-color;
           }
 
           h2 {
@@ -93,6 +95,8 @@ body {
             font-weight: 500;
             line-height: 25px;
             text-align: left;
+            opacity: 0.75;
+            color: $main-bg-color;
           }
 
           button {
