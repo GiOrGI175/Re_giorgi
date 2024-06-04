@@ -1,13 +1,17 @@
-@font-face {
-  font-family: 'Noto Sans Georgian';
-  src: url('../../essets/fonts/NotoSansGeorgian-VariableFont_wdth\,wght.ttf');
-}
+// @font-face {
+//   font-family: 'Noto Sans Georgian';
+//   src: url('../../essets/fonts/NotoSansGeorgian-VariableFont_wdth\,wght.ttf');
+// }
 
 @font-face {
   font-family: 'Manrope';
   src: url('../../essets/fonts/Manrope-VariableFont_wght.ttf');
 }
 
+// body {
+//   font-family: 'Manrope', 'Noto Sans Georgian', sans-serif;
+// }
+
 body {
-  font-family: 'Manrope', 'Noto Sans Georgian', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
