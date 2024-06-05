@@ -148,7 +148,7 @@ button {
   cursor: pointer;
 }
 
-body section .container .text_container h2 {
+body section .container .text_continer .text_content h2 {
   margin-top: 40px;
 }
 
@@ -160,11 +160,8 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
-body {
-  background-color: #0e0e0e;
-}
 body header .header_container {
-  max-width: 1440px;
+  max-width: 100%;
   height: 100px;
   margin: 0 auto;
   background-color: #0e0e0e;
@@ -179,13 +176,13 @@ body header .header_container .header_content {
   justify-content: space-between;
   align-items: center;
 }
-body header .header_container .header_content nav ul {
+body header .header_container .header_content .navigation nav ul {
   display: flex;
 }
-body header .header_container .header_content nav ul li:not(:last-child) {
+body header .header_container .header_content .navigation nav ul li:not(:last-child) {
   margin-right: 50px;
 }
-body header .header_container .header_content nav ul a {
+body header .header_container .header_content .navigation nav ul a {
   font-family: "Manrope", "Noto Sans Georgian", sans-serif;
   font-size: 13px;
   font-weight: bold;
@@ -193,9 +190,23 @@ body header .header_container .header_content nav ul a {
   letter-spacing: 2px;
   text-align: left;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
-body .underline {
-  width: 1110px;
+body header .header_container .header_content .navigation nav ul a:hover {
+  color: #d87d4a;
+}
+body header .header_container .header_content .navigation .cartsvg {
+  transition: all 0.5s ease-in-out;
+}
+body header .header_container .header_content .navigation .cartsvg:hover {
+  fill: #d87d4a;
+}
+body .underline_container {
+  background-color: #0e0e0e;
+}
+body .underline_container .underline {
+  max-width: 1110px;
+  width: 100%;
   height: 1px;
   margin: 0 auto;
   background-color: #979797;
@@ -204,18 +215,25 @@ body section {
   background-color: #0e0e0e;
 }
 body section .container {
-  width: 1110px;
   border: 2px solid #0e0e0e;
-  margin: 0 auto;
   display: flex;
+  justify-content: center;
 }
-body section .container .text_container {
+body section .container .text_continer {
+  max-width: 1110px;
+  width: 100%;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body section .container .text_continer .text_content {
   flex: 0.4;
   width: 398px;
   height: 346px;
-  margin: 125px 131px 158px 0px;
 }
-body section .container .text_container span {
+body section .container .text_continer .text_content span {
+  font-size: clamp(0.1rem, 4vw - 1rem, 1rem);
   font-weight: 400;
   line-height: 19.12px;
   letter-spacing: 10px;
@@ -223,18 +241,18 @@ body section .container .text_container span {
   opacity: 0.5;
   color: #fff;
 }
-body section .container .text_container h2 {
+body section .container .text_continer .text_content h2 {
   margin-bottom: 24px;
-  font-size: 56px;
+  font-size: clamp(1rem, 3.5vw + 1rem, 3.5rem);
   font-weight: 700;
   line-height: 58px;
   letter-spacing: 2px;
   text-align: left;
   color: #fff;
 }
-body section .container .text_container p {
+body section .container .text_continer .text_content p {
   margin-bottom: 40px;
-  width: 349px;
+  max-width: 349px;
   height: 75px;
   font-size: 15px;
   font-weight: 500;
@@ -243,7 +261,7 @@ body section .container .text_container p {
   opacity: 0.75;
   color: #fff;
 }
-body section .container .text_container button {
+body section .container .text_continer .text_content button {
   width: 160px;
   height: 48px;
   border: none;
@@ -256,8 +274,9 @@ body section .container .text_container button {
 }
 body section .container .img_box {
   flex: 0.6;
-  width: 581px;
-  height: 540px;
   margin-top: 13px;
   overflow: hidden;
+}
+body section .container .img_box img {
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */
