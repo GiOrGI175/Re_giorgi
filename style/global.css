@@ -180,8 +180,6 @@ body header .header_container .header_content nav ul {
 }
 body header .header_container .header_content nav ul li {
   margin-right: 50px;
-  width: 90px;
-  height: 25px;
 }
 body header .header_container .header_content nav ul li a {
   font-family: "Manrope", "Noto Sans Georgian", sans-serif;
