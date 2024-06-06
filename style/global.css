@@ -256,6 +256,7 @@ body section .container_2 .box_container .box .content {
   max-width: 350px;
   width: 100%;
   height: 204px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: end;

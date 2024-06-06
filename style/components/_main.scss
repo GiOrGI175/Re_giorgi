@@ -1,6 +1,6 @@
 body {
   main {
-    background-color: #0e0e0e;
+    background-color: $mackgroundClr;
 
     .container {
       display: flex;
@@ -8,18 +8,15 @@ body {
       .text_continer {
         max-width: 1110px;
         width: 100%;
-        background-color: #0e0e0e;
+        background-color: $mackgroundClr;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        // border: 2px solid white;
 
         .text_content {
           flex: 0.4;
           width: 398px;
           height: 346px;
-          // margin: 125px 131px 158px 0px;
 
           span {
             font-size: clamp(0.1rem, 4vw - 1rem, 1rem);
@@ -35,7 +32,6 @@ body {
             @extend %margin;
             margin-bottom: 24px;
             font-size: clamp(1rem, 3.5vw + 1rem, 3.5rem);
-            // font-size: 56px;
             font-weight: 700;
             line-height: 58px;
             letter-spacing: 2px;
@@ -64,11 +60,11 @@ body {
             line-height: 17.76px;
             letter-spacing: 1px;
             color: $main-bg-color;
-            background-color: $orange;
+            background-color: $btnColor;
             transition: all 0.5s ease-in-out;
           }
           button:hover {
-            background-color: #fbaf85;
+            background-color: $btnHoverClr;
           }
         }
       }
@@ -93,7 +89,6 @@ body {
         width: 100%;
         margin-top: 120px;
         display: flex;
-        // align-items: center;
 
         .margin:not(:last-child) {
           margin-right: 30px;
@@ -110,11 +105,12 @@ body {
             max-width: 350px;
             width: 100%;
             height: 204px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: end;
             align-items: center;
-            background-color: #f1f1f1;
+            background-color: $shopBoxClr;
 
             .img_box {
               position: relative;
@@ -129,7 +125,7 @@ body {
               line-height: 24.59px;
               letter-spacing: 1.2px;
               text-align: center;
-              color: #000000;
+              color: $blackClr;
             }
 
             a {
@@ -141,12 +137,12 @@ body {
               line-height: 17.76px;
               letter-spacing: 1px;
               text-align: center;
-              color: #000000;
+              color: $blackClr;
               cursor: pointer;
               transition: all 0.5s ease-in-out;
             }
             a:hover {
-              color: #d87d4a;
+              color: $btnColor;
             }
             .img_arrow {
               margin-left: 13px;
@@ -172,19 +168,19 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
+
           h2 {
             max-width: 445px;
             margin-bottom: 32px;
             font-size: clamp(1rem, 3.5vw + 1rem, 2.5rem);
-            // font-size: 40px;
             font-weight: 700;
             line-height: 44px;
             letter-spacing: 1.4px;
             text-align: left;
-            color: #000000;
+            color: $blackClr;
 
             span {
-              color: #d87d4a;
+              color: $btnColor;
             }
           }
 
@@ -199,6 +195,7 @@ body {
         }
         .img_container {
           flex: 1;
+
           .img_box {
             img {
               width: 100%;
