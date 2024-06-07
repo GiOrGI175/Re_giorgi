@@ -1,0 +1,14 @@
+//
+
+@mixin flexcontainer($justify, $align, $width: 1440px) {
+  width: $width;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.section1 {
+  @include flexcontainer(center, start);
+  flex-direction: column;
+}
+//
