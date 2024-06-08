@@ -12,7 +12,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: $tablet) {
+        @media (max-width: $l-tablet) {
           height: 640px;
           position: relative;
           display: flex;
@@ -24,7 +24,7 @@ body {
           flex: 0.4;
           width: 398px;
 
-          @media (max-width: $tablet) {
+          @media (max-width: $l-tablet) {
             position: absolute;
             z-index: 2;
             display: flex;
@@ -41,7 +41,7 @@ body {
             opacity: 0.5;
             color: $main-bg-color;
 
-            @media (max-width: $tablet) {
+            @media (max-width: $l-tablet) {
               font-size: 14px;
             }
           }
@@ -55,7 +55,7 @@ body {
             letter-spacing: 2px;
             text-align: left;
             color: $main-bg-color;
-            @media (max-width: $tablet) {
+            @media (max-width: $l-tablet) {
               text-align: center;
               font-size: 56px;
             }
@@ -71,7 +71,7 @@ body {
             text-align: left;
             opacity: 0.75;
             color: $main-bg-color;
-            @media (max-width: $tablet) {
+            @media (max-width: $l-tablet) {
               text-align: center;
               font-weight: 400;
             }
@@ -99,7 +99,7 @@ body {
         flex: 0.6;
         margin-top: 13px;
         overflow: hidden;
-        @media (max-width: $tablet) {
+        @media (max-width: $l-tablet) {
           max-width: 375px;
           position: absolute;
           object-fit: cover;
@@ -111,7 +111,7 @@ body {
 
         img {
           width: 100%;
-          @media (max-width: $tablet) {
+          @media (max-width: $l-tablet) {
             width: auto;
           }
         }
