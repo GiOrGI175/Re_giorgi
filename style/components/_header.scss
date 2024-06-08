@@ -18,8 +18,13 @@ body {
         @media (max-width: $l-tablet) {
           padding: 0px 40px;
         }
+        @media (max-width: $phone) {
+          padding: 0px 24px;
+        }
 
         .logo_container {
+          width: auto;
+          height: auto;
           @media (max-width: $l-tablet) {
             display: flex;
             align-items: center;
@@ -62,6 +67,9 @@ body {
             justify-content: center;
             align-items: center;
             width: 16px;
+            @media (max-width: $phone) {
+              margin-right: 0px;
+            }
 
             cursor: pointer;
             transition: all 0.5s ease-in-out;
@@ -84,6 +92,19 @@ body {
                 }
               }
             }
+          }
+
+          .logo {
+            @media (max-width: $phone) {
+              display: none;
+            }
+          }
+        }
+
+        .phone_logo {
+          display: none;
+          @media (max-width: $phone) {
+            display: block;
           }
         }
 
@@ -136,6 +157,10 @@ body {
       @media (max-width: $l-tablet) {
         padding: 0px 40px;
       }
+      @media (max-width: $phone) {
+        padding: 0px;
+      }
+
       .underline {
         max-width: 1110px;
         width: 100%;
