@@ -12,11 +12,25 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $tablet) {
+          height: 640px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          z-index: 1;
+        }
 
         .text_content {
           flex: 0.4;
           width: 398px;
-          height: 346px;
+
+          @media (max-width: $tablet) {
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
 
           span {
             font-size: clamp(0.1rem, 4vw - 1rem, 1rem);
@@ -26,6 +40,10 @@ body {
             text-align: left;
             opacity: 0.5;
             color: $main-bg-color;
+
+            @media (max-width: $tablet) {
+              font-size: 14px;
+            }
           }
 
           h2 {
@@ -37,6 +55,10 @@ body {
             letter-spacing: 2px;
             text-align: left;
             color: $main-bg-color;
+            @media (max-width: $tablet) {
+              text-align: center;
+              font-size: 56px;
+            }
           }
 
           p {
@@ -49,6 +71,10 @@ body {
             text-align: left;
             opacity: 0.75;
             color: $main-bg-color;
+            @media (max-width: $tablet) {
+              text-align: center;
+              font-weight: 400;
+            }
           }
 
           button {
@@ -73,9 +99,21 @@ body {
         flex: 0.6;
         margin-top: 13px;
         overflow: hidden;
+        @media (max-width: $tablet) {
+          max-width: 375px;
+          position: absolute;
+          object-fit: cover;
+          background-position: center;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+        }
 
         img {
           width: 100%;
+          @media (max-width: $tablet) {
+            width: auto;
+          }
         }
       }
     }

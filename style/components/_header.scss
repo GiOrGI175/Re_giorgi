@@ -15,6 +15,78 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $tablet) {
+          padding: 0px 40px;
+        }
+
+        .logo_container {
+          @media (max-width: $tablet) {
+            display: flex;
+            align-items: center;
+          }
+
+          .menu_btn {
+            display: none;
+            margin-right: 42px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            height: 1px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            @media (max-width: $tablet) {
+              display: block;
+            }
+
+            .menu_btn_burger {
+              display: none;
+              width: 16px;
+              height: 3px;
+              background-color: white;
+              transition: all 0.5s ease-in-out;
+              @media (max-width: $tablet) {
+                display: block;
+              }
+
+              &::before,
+              &::after {
+                content: ' ';
+                position: absolute;
+                width: 16px;
+                height: 3px;
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+              }
+
+              &::before {
+                transform: translateY(-6px);
+              }
+
+              &::after {
+                transform: translateY(6px);
+              }
+            }
+
+            .menu_btn.open {
+              .menu_btn_burger {
+                transform: rotate(90deg);
+                background-color: transparent;
+                transition: all 0.5s ease-in-out;
+
+                &::before {
+                  transform: rotate(45deg);
+                }
+
+                &::after {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+        }
+
         .navigation {
           @media (max-width: $tablet) {
             display: none;
@@ -61,6 +133,9 @@ body {
     }
     .underline_container {
       background-color: $mackgroundClr;
+      @media (max-width: $tablet) {
+        padding: 0px 40px;
+      }
       .underline {
         max-width: 1110px;
         width: 100%;
