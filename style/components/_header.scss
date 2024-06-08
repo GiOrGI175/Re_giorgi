@@ -22,8 +22,6 @@ body {
             li:not(:last-child) {
               margin-right: 50px;
             }
-            // li {
-            //   margin-right: 50px;
 
             a {
               font-size: 13px;
@@ -39,23 +37,33 @@ body {
             }
           }
         }
-        .cart_svg {
-          transition: all 0.5s ease-in-out;
-        }
-        .cart_svg:hover {
-          fill: #d87d4a;
+        .cart {
+          a {
+            .cart_svg {
+              path {
+                transition: all 0.5s ease-in-out;
+              }
+            }
+            &:hover {
+              .cart_svg {
+                path {
+                  fill: $btnColor;
+                }
+              }
+            }
+          }
         }
       }
     }
-  }
-  .underline_container {
-    background-color: #0e0e0e;
-    .underline {
-      max-width: 1110px;
-      width: 100%;
-      height: 1px;
-      margin: 0 auto;
-      background-color: #979797;
+    .underline_container {
+      background-color: #0e0e0e;
+      .underline {
+        max-width: 1110px;
+        width: 100%;
+        height: 1px;
+        margin: 0 auto;
+        background-color: #979797;
+      }
     }
   }
 }
