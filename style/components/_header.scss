@@ -25,6 +25,35 @@ body {
             align-items: center;
           }
 
+          .menu_btn_burger {
+            display: none;
+            width: 16px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.5s ease-in-out;
+            @media (max-width: $tablet) {
+              display: block;
+            }
+
+            &::before,
+            &::after {
+              content: ' ';
+              position: absolute;
+              width: 16px;
+              height: 3px;
+              background-color: white;
+              transition: all 0.5s ease-in-out;
+            }
+
+            &::before {
+              transform: translateY(-6px);
+            }
+
+            &::after {
+              transform: translateY(6px);
+            }
+          }
+
           .menu_btn {
             display: none;
             margin-right: 42px;
@@ -33,43 +62,14 @@ body {
             justify-content: center;
             align-items: center;
             width: 16px;
-            height: 1px;
+
             cursor: pointer;
             transition: all 0.5s ease-in-out;
             @media (max-width: $tablet) {
               display: block;
             }
 
-            .menu_btn_burger {
-              display: none;
-              width: 16px;
-              height: 3px;
-              background-color: white;
-              transition: all 0.5s ease-in-out;
-              @media (max-width: $tablet) {
-                display: block;
-              }
-
-              &::before,
-              &::after {
-                content: ' ';
-                position: absolute;
-                width: 16px;
-                height: 3px;
-                background-color: white;
-                transition: all 0.5s ease-in-out;
-              }
-
-              &::before {
-                transform: translateY(-6px);
-              }
-
-              &::after {
-                transform: translateY(6px);
-              }
-            }
-
-            .menu_btn.open {
+            &.open {
               .menu_btn_burger {
                 transform: rotate(90deg);
                 background-color: transparent;
