@@ -1,8 +1,8 @@
 @import './utils/reset';
 @import 'utils/variables';
+@import 'utils/fonts';
 @import './utils/mixin';
 @import './utils/extend';
-@import 'utils/fonts';
-@import 'components/main';
 @import 'components/header';
+@import 'components/main';
 @import 'components/footer';
