@@ -4,14 +4,14 @@ body {
       max-width: 100%;
       height: 100px;
       margin: 0 auto;
-      background-color: #0e0e0e;
+      background-color: $mackgroundClr;
       display: flex;
       justify-content: center;
 
       .header_content {
         max-width: 1110px;
         width: 100%;
-        background-color: #0e0e0e;
+        background-color: $mackgroundClr;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -29,11 +29,11 @@ body {
               line-height: 25px;
               letter-spacing: 2px;
               text-align: left;
-              color: white;
+              color: $main-bg-color;
               transition: all 0.5s ease-in-out;
             }
             a:hover {
-              color: #d87d4a;
+              color: $btnColor;
             }
           }
         }
@@ -56,13 +56,14 @@ body {
       }
     }
     .underline_container {
-      background-color: #0e0e0e;
+      background-color: $mackgroundClr;
       .underline {
         max-width: 1110px;
         width: 100%;
         height: 1px;
         margin: 0 auto;
-        background-color: #979797;
+        opacity: 0.2;
+        background-color: $main-bg-color;
       }
     }
   }

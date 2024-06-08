@@ -148,14 +148,6 @@ button {
   cursor: pointer;
 }
 
-.section1 {
-  width: 1440px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-
 body main .container .text_continer .text_content h2 {
   margin-top: 40px;
 }
@@ -377,7 +369,7 @@ body header .header_container .header_content .navigation nav ul a {
   line-height: 25px;
   letter-spacing: 2px;
   text-align: left;
-  color: white;
+  color: #fff;
   transition: all 0.5s ease-in-out;
 }
 body header .header_container .header_content .navigation nav ul a:hover {
@@ -397,5 +389,6 @@ body header .underline_container .underline {
   width: 100%;
   height: 1px;
   margin: 0 auto;
-  background-color: #979797;
+  opacity: 0.2;
+  background-color: #fff;
 }/*# sourceMappingURL=global.css.map */
