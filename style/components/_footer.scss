@@ -1,0 +1,110 @@
+body {
+  footer {
+    .footer_container {
+      padding: 72px 0px 48px 0px;
+      max-width: 100%;
+      background-color: $mackgroundClr;
+      display: flex;
+      justify-content: center;
+      .footer_content {
+        max-width: 1110px;
+        width: 100%;
+        background-color: $mackgroundClr;
+        display: flex;
+        flex-direction: column;
+        .footer_head {
+          margin-bottom: 36px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .img_box {
+            position: relative;
+            .headline {
+              width: 101px;
+              height: 4px;
+              position: absolute;
+              top: -72px;
+              background-color: $btnColor;
+            }
+          }
+
+          .navigation {
+            nav {
+              ul {
+                display: flex;
+                li:not(:last-child) {
+                  margin-right: 34px;
+                }
+                a {
+                  font-size: 13px;
+                  font-weight: 700;
+                  line-height: 25px;
+                  letter-spacing: 2px;
+                  text-align: left;
+                  color: $main-bg-color;
+                  transition: all 0.5s ease-in-out;
+                }
+                a:hover {
+                  color: $btnColor;
+                }
+              }
+            }
+          }
+        }
+        .footer_info {
+          margin-bottom: 56px;
+          p {
+            max-width: 540px;
+            opacity: 0.5;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+            text-align: left;
+            color: $main-bg-color;
+          }
+        }
+        .footer_end {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            span {
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 25px;
+              text-align: left;
+              color: $main-bg-color;
+            }
+          }
+          .socialmedea {
+            position: relative;
+            top: -80px;
+
+            ul {
+              display: flex;
+
+              li:not(:last-child) {
+                margin-right: 16px;
+              }
+            }
+            a {
+              .social_svg {
+                path {
+                  transition: all 0.5s ease-in-out;
+                }
+              }
+              &:hover {
+                .social_svg {
+                  path {
+                    fill: $btnColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
