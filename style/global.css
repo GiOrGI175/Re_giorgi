@@ -166,15 +166,20 @@ body header .header_container {
   margin: 0 auto;
   background-color: #0e0e0e;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 body header .header_container .header_content {
   max-width: 1110px;
   width: 100%;
   background-color: #0e0e0e;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body header .header_container .header_content {
@@ -193,7 +198,10 @@ body header .header_container .header_content .logo_container {
 @media (max-width: 1024px) {
   body header .header_container .header_content .logo_container {
     display: flex;
+    flex-direction: row;
+    justify-content: none;
     align-items: center;
+    flex-wrap: nowrap;
   }
 }
 body header .header_container .header_content .logo_container .menu_btn_burger {
@@ -225,10 +233,11 @@ body header .header_container .header_content .logo_container .menu_btn_burger::
 body header .header_container .header_content .logo_container .menu_btn {
   display: none;
   margin-right: 42px;
-  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   width: 16px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -323,15 +332,20 @@ body main {
 }
 body main .container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  flex-wrap: none;
 }
 body main .container .text_continer {
   max-width: 1110px;
   width: 100%;
   background-color: #0e0e0e;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body main .container .text_continer {
@@ -356,7 +370,9 @@ body main .container .text_continer .text_content {
     z-index: 1;
     display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center;
+    flex-wrap: nowrap;
   }
 }
 body main .container .text_continer .text_content span {
@@ -446,7 +462,10 @@ body main .container .img_box {
        object-fit: contain;
     background-position: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: none;
+    flex-wrap: nowrap;
   }
 }
 body main .container .img_box img {
@@ -459,7 +478,10 @@ body main .container .img_box img {
 }
 body section .container_2 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body section .container_2 {
@@ -480,8 +502,11 @@ body section .container_2 .box_container {
 @media (max-width: 720px) {
   body section .container_2 .box_container {
     margin-top: 40px;
+    display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center;
+    flex-wrap: nowrap;
   }
 }
 body section .container_2 .box_container .margin:not(:last-child) {
@@ -503,7 +528,10 @@ body section .container_2 .box_container .box {
   width: 100%;
   height: 284px;
   display: flex;
+  flex-direction: row;
+  justify-content: none;
   align-items: end;
+  flex-wrap: nowrap;
 }
 body section .container_2 .box_container .box .content {
   max-width: 350px;
@@ -514,6 +542,7 @@ body section .container_2 .box_container .box .content {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  flex-wrap: nowrap;
   background-color: #f1f1f1;
 }
 body section .container_2 .box_container .box .content .img_box {
@@ -533,7 +562,10 @@ body section .container_2 .box_container .box .content h3 {
 body section .container_2 .box_container .box .content a {
   margin-bottom: 30px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   font-size: 13px;
   font-weight: 700;
   line-height: 17.76px;
@@ -551,7 +583,10 @@ body section .container_2 .box_container .box .content .img_arrow {
 }
 body .info_section .container_3 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body .info_section .container_3 {
@@ -568,7 +603,10 @@ body .info_section .container_3 .content {
   width: 100%;
   margin-top: 112px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body .info_section .container_3 .content {
@@ -580,6 +618,8 @@ body .info_section .container_3 .content .info_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body .info_section .container_3 .content .info_content {
@@ -640,7 +680,10 @@ body .info_section .container_3 .content .img_container {
 @media (max-width: 1024px) {
   body .info_section .container_3 .content .img_container .img_box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: none;
+    flex-wrap: nowrap;
   }
 }
 body .info_section .container_3 .content .img_container .img_box .img_pc {
@@ -674,7 +717,10 @@ body footer .footer_container {
   max-width: 100%;
   background-color: #0e0e0e;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024px) {
   body footer .footer_container {
@@ -692,6 +738,9 @@ body footer .footer_container .footer_content {
   background-color: #0e0e0e;
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 720px) {
   body footer .footer_container .footer_content {
@@ -701,8 +750,10 @@ body footer .footer_container .footer_content {
 body footer .footer_container .footer_content .footer_head {
   margin-bottom: 36px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 @media (max-width: 720px) {
   body footer .footer_container .footer_content .footer_head {
@@ -789,7 +840,10 @@ body footer .footer_container .footer_content .footer_info p {
 }
 body footer .footer_container .footer_content .footer_end {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: none;
+  flex-wrap: nowrap;
 }
 @media (max-width: 720px) {
   body footer .footer_container .footer_content .footer_end {
