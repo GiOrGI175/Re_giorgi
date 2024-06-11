@@ -6,17 +6,13 @@ body {
       margin: 0 auto;
       background-color: $mackgroundClr;
       @include flex_drct_jstf_algn_wrp(row, center);
-      // display: flex;
-      // justify-content: center;
 
       .header_content {
         max-width: 1110px;
         width: 100%;
         background-color: $mackgroundClr;
         @include flex_drct_jstf_algn_wrp(row, space-between, center);
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
+
         @media (max-width: $l-tablet) {
           padding: 0px 40px;
         }
@@ -29,8 +25,6 @@ body {
           height: auto;
           @media (max-width: $l-tablet) {
             @include flex_drct_jstf_algn_wrp(row, none, center);
-            // display: flex;
-            // align-items: center;
           }
 
           .menu_btn_burger {
@@ -65,11 +59,9 @@ body {
           .menu_btn {
             display: none;
             margin-right: 42px;
-            // position: relative;
+
             @include flex_drct_jstf_algn_wrp(row, center, center);
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+
             width: 16px;
             @media (max-width: $phone) {
               margin-right: 0px;

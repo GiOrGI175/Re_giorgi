@@ -5,8 +5,6 @@ body {
       max-width: 100%;
       background-color: $mackgroundClr;
       @include flex_drct_jstf_algn_wrp(row, center, none);
-      // display: flex;
-      // justify-content: center;
       @media (max-width: $l-tablet) {
         padding: 60px 40px 45px 40px;
       }
@@ -19,8 +17,6 @@ body {
         width: 100%;
         background-color: $mackgroundClr;
         @include flex_drct_jstf_algn_wrp(column, none, none);
-        // display: flex;
-        // flex-direction: column;
         @media (max-width: $phone) {
           align-items: center;
         }
@@ -28,9 +24,6 @@ body {
         .footer_head {
           margin-bottom: 36px;
           @include flex_drct_jstf_algn_wrp(row, space-between, center);
-          // display: flex;
-          // justify-content: space-between;
-          // align-items: center;
           @media (max-width: $phone) {
             margin-bottom: 48px;
             flex-direction: column;
@@ -100,7 +93,6 @@ body {
             font-size: 15px;
             font-weight: 400;
             line-height: 25px;
-            // text-align: left;
             color: $main-bg-color;
           }
           @media (max-width: $phone) {
@@ -109,8 +101,6 @@ body {
         }
         .footer_end {
           @include flex_drct_jstf_algn_wrp(row, space-between, none);
-          // display: flex;
-          // justify-content: space-between;
           @media (max-width: $phone) {
             flex-direction: column;
             align-items: center;
