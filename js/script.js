@@ -4,8 +4,6 @@ btn.addEventListener('click', () => {
   btn.classList.toggle('open');
 });
 
-AOS.init();
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -40,3 +38,5 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+AOS.init();
