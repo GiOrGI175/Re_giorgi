@@ -322,7 +322,7 @@ body {
         width: 100%;
         .navigation_box {
           margin-bottom: 53px;
-          @include flex_drct_jstf_algn_wrp(row, space-between, center);
+          @include flex_drct_jstf_algn_wrp(row, space-between, end);
           h2 {
             max-width: 585;
             font-family: 'Integral CF';

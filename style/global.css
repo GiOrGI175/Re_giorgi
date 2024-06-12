@@ -745,7 +745,7 @@ body .feedback_section .container_4 .content .navigation_box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   flex-wrap: nowrap;
 }
 body .feedback_section .container_4 .content .navigation_box h2 {
