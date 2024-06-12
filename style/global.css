@@ -726,6 +726,7 @@ body .info_section .container_3 .content .img_container .img_box .img_tablet {
   }
 }
 body .feedback_section {
+  overflow: hidden;
   margin-top: 120px;
 }
 body .feedback_section .container_4 {
