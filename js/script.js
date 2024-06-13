@@ -55,6 +55,10 @@ const swiper = new Swiper('.swiper', {
 AOS.init();
 //! animations >]
 
+////! sale_data_section [<
+
+//! get element [<
+
 let dayData = document.getElementById('day_data');
 
 let hourData = document.getElementById('hours_data');
@@ -62,6 +66,8 @@ let hourData = document.getElementById('hours_data');
 let munuteData = document.getElementById('munutes_data');
 
 let secondsData = document.getElementById('seconds_data');
+
+//! get element >]
 
 let saleDate = new Date('2024-07-09T00:00:00').getTime();
 
@@ -88,3 +94,5 @@ let x = setInterval(() => {
 
   secondsData.textContent = seconds;
 }, 1000);
+
+////! sale_data_section >]
