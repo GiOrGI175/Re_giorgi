@@ -160,6 +160,14 @@ button {
   font-family: "Integral CF";
   src: url("../../essets/fonts/Fontspring-DEMO-integralcf-bold.otf");
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("../../essets/fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: "Poppins light";
+  src: url("../../essets/fonts/Poppins-Light.ttf");
+}
 body {
   font-family: "Manrope", sans-serif;
 }
@@ -727,7 +735,6 @@ body .info_section .container_3 .content .img_container .img_box .img_tablet {
 }
 body .feedback_section {
   overflow: hidden;
-  margin-top: 120px;
 }
 body .feedback_section .container_4 {
   display: flex;
@@ -739,6 +746,7 @@ body .feedback_section .container_4 {
 body .feedback_section .container_4 .content {
   max-width: 1110px;
   width: 100%;
+  margin-top: 120px;
 }
 body .feedback_section .container_4 .content .navigation_box {
   margin-bottom: 53px;
@@ -748,6 +756,15 @@ body .feedback_section .container_4 .content .navigation_box {
   align-items: end;
   flex-wrap: nowrap;
 }
+@media (max-width: 720px) {
+  body .feedback_section .container_4 .content .navigation_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 body .feedback_section .container_4 .content .navigation_box h2 {
   max-width: 585;
   font-family: "Integral CF";
@@ -755,6 +772,14 @@ body .feedback_section .container_4 .content .navigation_box h2 {
   font-weight: 700;
   line-height: 57.6px;
   text-align: left;
+}
+@media (max-width: 720px) {
+  body .feedback_section .container_4 .content .navigation_box h2 {
+    padding: 0px 24px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
 }
 body .feedback_section .container_4 .content .navigation_box .navigation_arrow {
   width: 62px;
@@ -764,9 +789,14 @@ body .feedback_section .container_4 .content .navigation_box .navigation_arrow {
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 720px) {
+  body .feedback_section .container_4 .content .navigation_box .navigation_arrow {
+    margin-top: 40px;
+  }
+}
 body .feedback_section .container_4 .content .swiper {
   width: 1100;
-  height: 240px;
+  min-height: 240px;
 }
 body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-slide {
   display: flex;
@@ -780,10 +810,19 @@ body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-sli
 }
 body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-slide .feedback {
   width: 358px;
-  height: 240px;
+  min-height: 240px;
   padding: 28px 32px 28px 32px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+@media (max-width: 720px) {
+  body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-slide .feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-slide .feedback h3 {
   margin-bottom: 12px;
@@ -799,10 +838,136 @@ body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-sli
   text-align: left;
   color: rgba(0, 0, 0, 0.6);
 }
+@media (max-width: 720px) {
+  body .feedback_section .container_4 .content .swiper .swiper-wrapper .swiper-slide .feedback p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+body .sale_data_section {
+  overflow: hidden;
+}
+body .sale_data_section .container_5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .sale_data_section .container_5 .content {
+  max-width: 1110px;
+  width: 100%;
+  margin-top: 120px;
+}
+@media (max-width: 720px) {
+  body .sale_data_section .container_5 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+body .sale_data_section .container_5 .content h2 {
+  max-width: 585.44px;
+  font-family: "Noto Sans Georgian";
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 65.28px;
+}
+@media (max-width: 720px) {
+  body .sale_data_section .container_5 .content h2 {
+    display: flex;
+    text-align: center;
+  }
+}
+body .sale_data_section .container_5 .content .time_data {
+  display: flex;
+  width: 100%;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media (max-width: 720px) {
+  body .sale_data_section .container_5 .content .time_data {
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+body .sale_data_section .container_5 .content .time_data .flex_row {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin-right: 33px;
+}
+@media (max-width: 720px) {
+  body .sale_data_section .container_5 .content .time_data .flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 0px;
+    margin-bottom: 33px;
+  }
+}
+body .sale_data_section .container_5 .content .time_data .flex_row_2 {
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+@media (max-width: 720px) {
+  body .sale_data_section .container_5 .content .time_data .flex_row_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+body .sale_data_section .container_5 .content .time_data .data_box:not(:last-child) {
+  margin-right: 33px;
+}
+body .sale_data_section .container_5 .content .time_data .data_box {
+  max-width: 252px;
+  width: 100%;
+  height: 199px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #101010;
+}
+body .sale_data_section .container_5 .content .time_data .data_box span {
+  font-family: "Poppins";
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 96px;
+  text-align: center;
+  color: #fff;
+}
+body .sale_data_section .container_5 .content .time_data .data_box p {
+  font-family: "Poppins light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+}
 
 body footer .footer_container {
   padding: 72px 0px 48px 0px;
   max-width: 100%;
+  margin-top: 256px;
   background-color: #0e0e0e;
   display: flex;
   flex-direction: row;

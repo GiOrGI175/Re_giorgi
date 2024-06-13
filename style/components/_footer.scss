@@ -3,6 +3,7 @@ body {
     .footer_container {
       padding: 72px 0px 48px 0px;
       max-width: 100%;
+      margin-top: 256px;
       background-color: $mackgroundClr;
       @include flex_drct_jstf_algn_wrp(row, center, none);
       @media (max-width: $l-tablet) {
