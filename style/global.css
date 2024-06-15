@@ -458,9 +458,11 @@ body main .container .text_continer .text_content button {
   font-weight: 700;
   line-height: 17.76px;
   letter-spacing: 1px;
-  color: #fff;
   background-color: #d87d4a;
   transition: all 0.5s ease-in-out;
+}
+body main .container .text_continer .text_content button a {
+  color: #fff;
 }
 body main .container .text_continer .text_content button:hover {
   background-color: #fbaf85;
@@ -962,6 +964,161 @@ body .sale_data_section .container_5 .content .time_data .data_box p {
   line-height: 24px;
   text-align: center;
   color: #fff;
+}
+
+body .products_main {
+  margin-bottom: 160px;
+  background-color: #0e0e0e;
+}
+body .products_main .main_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .products_main .main_container .text_continer {
+  max-width: 1110px;
+  width: 100%;
+  height: 240px;
+  background-color: #0e0e0e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .products_main .main_container .text_continer h2 {
+  width: 229px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: #fff;
+}
+body .products_section .products_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .products_section .products_container .products_list {
+  max-width: 1110px;
+  width: 100%;
+}
+body .products_section .products_container .products_list .product:not(:last-child) {
+  margin-bottom: 146px;
+}
+body .products_section .products_container .products_list .product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .products_section .products_container .products_list .product .img_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 540px;
+  padding: 90px 90px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex: 1;
+  background-color: #f1f1f1;
+}
+body .products_section .products_container .products_list .product .img_box img {
+  width: 100%;
+  filter: drop-shadow(0px 100px 90px #000000);
+}
+body .products_section .products_container .products_list .product .text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  max-width: 445px;
+  flex: 1;
+}
+body .products_section .products_container .products_list .product .text_container span {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.12px;
+  letter-spacing: 10px;
+  text-align: center;
+  color: #d87d4a;
+}
+body .products_section .products_container .products_list .product .text_container h2 {
+  margin-bottom: 32px;
+  max-width: 445px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4285714626px;
+  text-align: center;
+}
+body .products_section .products_container .products_list .product .text_container p {
+  margin-bottom: 40px;
+  max-width: 445px;
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #000000;
+}
+body .products_section .products_container .products_list .product .text_container button {
+  width: 160px;
+  height: 48px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #d87d4a;
+  transition: all 0.5s ease-in-out;
+}
+body .products_section .products_container .products_list .product .text_container button:hover {
+  background-color: #fbaf85;
+}
+body .products_section .products_container .btn_box {
+  width: 100%;
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .products_section .products_container .btn_box .lf_arw {
+  width: 32px;
+  height: 32px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+body .products_section .products_container .btn_box .rt_arw {
+  width: 32px;
+  height: 32px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 body footer .footer_container {

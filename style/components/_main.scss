@@ -93,9 +93,12 @@ body {
             font-weight: 700;
             line-height: 17.76px;
             letter-spacing: 1px;
-            color: $main-bg-color;
             background-color: $btnColor;
             transition: all 0.5s ease-in-out;
+
+            a {
+              color: $main-bg-color;
+            }
           }
           button:hover {
             background-color: $btnHoverClr;
