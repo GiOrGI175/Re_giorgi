@@ -1120,6 +1120,12 @@ body .products_section .products_container .btn_box .rt_arw {
   border: 2px solid #000000;
   border-radius: 4px;
 }
+body .opacity {
+  opacity: 0.5;
+}
+body .order {
+  order: 2;
+}
 
 body footer .footer_container {
   padding: 72px 0px 48px 0px;

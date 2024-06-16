@@ -74,18 +74,34 @@ function displayProducts() {
 
     productsList.appendChild(productBox);
   });
+
+  const imgBoxes = document.querySelectorAll('.img_box');
+
+  imgBoxes.forEach((imgBox, index) => {
+    if (index % 2 !== 0) {
+      imgBox.classList.add('order');
+    }
+  });
 }
 
 pervBtn.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage = currentPage - 1;
+    window.scrollTo(0, 0);
     displayProducts();
   }
 });
 
+if (currentPage === 1) {
+  pervBtn.classList.add('opacity');
+} else {
+  pervBtn.classList.remove('opacity');
+}
+
 nextBtn.addEventListener('click', () => {
   if (currentPage < Math.ceil(products.length / limit)) {
     currentPage = currentPage + 1;
+    window.scrollTo(0, 0);
     displayProducts();
   }
 });

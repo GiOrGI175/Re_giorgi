@@ -44,6 +44,7 @@ body {
             width: 100%;
             height: fit-content;
             flex: 1;
+            // order: 2;
             background-color: $shopBoxClr;
 
             img {
@@ -132,4 +133,15 @@ body {
       }
     }
   }
+  //
+
+  .opacity {
+    opacity: 0.5;
+  }
+
+  .order {
+    order: 2;
+  }
+
+  //
 }
