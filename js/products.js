@@ -81,6 +81,16 @@ function displayProducts() {
     if (index % 2 !== 0) {
       imgBox.classList.add('order');
     }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth < 850) {
+        imgBox.classList.remove('order');
+      } else {
+        if (index % 2 !== 0) {
+          imgBox.classList.add('order');
+        }
+      }
+    });
   });
 }
 
@@ -91,12 +101,6 @@ pervBtn.addEventListener('click', () => {
     displayProducts();
   }
 });
-
-if (currentPage === 1) {
-  pervBtn.classList.add('opacity');
-} else {
-  pervBtn.classList.remove('opacity');
-}
 
 nextBtn.addEventListener('click', () => {
   if (currentPage < Math.ceil(products.length / limit)) {

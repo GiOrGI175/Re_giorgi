@@ -11,6 +11,14 @@ body {
         background-color: $mackgroundClr;
         @include flex_drct_jstf_algn_wrp(row, center, center);
 
+        @media (max-width: $l-tablet) {
+          height: 246px;
+        }
+
+        @media (max-width: $phone) {
+          height: 102px;
+        }
+
         h2 {
           width: 229px;
           font-size: 40px;
@@ -19,6 +27,22 @@ body {
           letter-spacing: 1.4px;
           text-align: center;
           color: $main-bg-color;
+          @media (max-width: $phone) {
+            display: none;
+          }
+        }
+
+        .dispaly {
+          display: none;
+
+          @media (max-width: $phone) {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 38.25px;
+            letter-spacing: 2px;
+            text-align: center;
+          }
         }
       }
     }
@@ -37,19 +61,39 @@ body {
         .product {
           @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
+          @media (max-width: $l-tablet) {
+            width: 100%;
+            padding: 0px 40px;
+            @include flex_drct_jstf_algn_wrp(column, center, center);
+          }
+
+          @media (max-width: $phone) {
+            padding: 0px 24px;
+          }
+
           .img_box {
             @include flex_drct_jstf_algn_wrp(column, center, center);
             max-width: 540px;
+            margin-bottom: 52px;
             padding: 90px 90px;
-            width: 100%;
-            height: fit-content;
             flex: 1;
             // order: 2;
             background-color: $shopBoxClr;
 
+            @media (max-width: $l-tablet) {
+              max-width: none;
+              width: 100%;
+              height: 352px;
+              // padding: 40px 235px;
+            }
+
             img {
               width: 100%;
               filter: drop-shadow(0px 100px 90px #000000);
+              @media (max-width: $l-tablet) {
+                width: 220px;
+                height: 243px;
+              }
             }
           }
 
@@ -57,6 +101,13 @@ body {
             @include flex_drct_jstf_algn_wrp(column, center, start);
             max-width: 445px;
             flex: 1;
+            @media (max-width: $l-tablet) {
+              max-width: 572px;
+            }
+
+            @media (max-width: $l-tablet) {
+              @include flex_drct_jstf_algn_wrp(column, center, center);
+            }
 
             span {
               margin-bottom: 16px;
@@ -74,18 +125,30 @@ body {
               font-size: 40px;
               font-weight: 700;
               line-height: 44px;
-              letter-spacing: 1.4285714626312256px;
-              text-align: center;
+              letter-spacing: 1.4px;
+              text-align: left;
+              @media (max-width: $l-tablet) {
+                text-align: center;
+              }
+              @media (max-width: $phone) {
+                font-size: 28px;
+                line-height: 38.25px;
+              }
             }
 
             p {
-              margin-bottom: 40px;
               max-width: 445px;
+              margin-bottom: 40px;
               opacity: 0.5;
               font-size: 15px;
               font-weight: 500;
               line-height: 25px;
               color: $blackClr;
+              @media (max-width: $l-tablet) {
+                max-width: 572px;
+                margin-bottom: 24px;
+                text-align: center;
+              }
             }
 
             button {
