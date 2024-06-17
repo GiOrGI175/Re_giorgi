@@ -92,6 +92,7 @@ function displayProducts() {
       }
     });
   });
+  btnOpacity();
 }
 
 pervBtn.addEventListener('click', () => {
@@ -100,6 +101,7 @@ pervBtn.addEventListener('click', () => {
     window.scrollTo(0, 0);
     displayProducts();
   }
+  btnOpacity();
 });
 
 nextBtn.addEventListener('click', () => {
@@ -108,4 +110,23 @@ nextBtn.addEventListener('click', () => {
     window.scrollTo(0, 0);
     displayProducts();
   }
+  btnOpacity();
 });
+
+function btnOpacity() {
+  if (currentPage === 1) {
+    pervBtn.disabled = true;
+    pervBtn.classList.add('opacity');
+  } else {
+    pervBtn.disabled = false;
+    pervBtn.classList.remove('opacity');
+  }
+
+  if (currentPage === Math.ceil(products.length / limit)) {
+    nextBtn.disabled = true;
+    nextBtn.classList.add('opacity');
+  } else {
+    nextBtn.disabled = false;
+    nextBtn.classList.remove('opacity');
+  }
+}

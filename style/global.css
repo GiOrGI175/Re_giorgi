@@ -1209,6 +1209,7 @@ body .products_section .products_container .btn_box .rt_arw {
 }
 body .opacity {
   opacity: 0.5;
+  cursor: auto;
 }
 body .order {
   order: 2;
