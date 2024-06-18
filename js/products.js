@@ -11,7 +11,7 @@ let limit = 2;
 let products = [];
 
 async function addPage() {
-  let url = 'audio_products.json';
+  let url = 'products.json';
 
   try {
     let response = await fetch(url);
@@ -47,7 +47,7 @@ function displayProducts() {
     imgBox.className = 'img_box';
 
     const img = document.createElement('img');
-    img.src = `${product.img}`;
+    img.src = `essets/webp/main/products_page/${product.img}`;
     img.alt = product.name;
     imgBox.appendChild(img);
 
@@ -69,6 +69,9 @@ function displayProducts() {
 
     const seeProductBtn = document.createElement('button');
     seeProductBtn.textContent = 'See Product';
+    seeProductBtn.addEventListener('click', () => {
+      seeMore(product.id);
+    });
 
     textBox.appendChild(seeProductBtn);
 
@@ -93,6 +96,10 @@ function displayProducts() {
     });
   });
   btnOpacity();
+}
+
+function seeMore(productId) {
+  window.location.href = `products.html?id=${productId}`;
 }
 
 pervBtn.addEventListener('click', () => {
@@ -130,3 +137,34 @@ function btnOpacity() {
     nextBtn.classList.remove('opacity');
   }
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const productId = parseInt(urlParams.get('id'));
+
+const product = products.find((p) => p.id === productId);
+
+if (product) {
+  newProductIndicator.textContent = product.new;
+  document.getElementById('products-name').textContent = product.name;
+
+  document.getElementById('products-description').textContent =
+    product.description;
+
+  document.getElementById('products-price').textContent = product.price;
+} else {
+  document.querySelector('.products-details').textContent =
+    '404 product not found';
+}
+
+// const urlParams = new URLSearchParams(window.location.search);
+
+// const productId = parseInt(urlParams.get('id'));
+
+// let url = 'products.json';
+
+// const individproduct = url.find((p) => p.id === productId);
+
+// if (individproduct) {
+//   console.log('new pg');
+// }

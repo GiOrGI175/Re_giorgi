@@ -1009,20 +1009,9 @@ body .products_main .main_container .text_continer h2 {
 }
 @media (max-width: 720px) {
   body .products_main .main_container .text_continer h2 {
-    display: none;
-  }
-}
-body .products_main .main_container .text_continer .dispaly {
-  display: none;
-}
-@media (max-width: 720px) {
-  body .products_main .main_container .text_continer .dispaly {
-    display: block;
     font-size: 28px;
-    font-weight: 700;
     line-height: 38.25px;
     letter-spacing: 2px;
-    text-align: center;
   }
 }
 body .products_section .products_container {

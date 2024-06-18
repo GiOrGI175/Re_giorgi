@@ -28,20 +28,9 @@ body {
           text-align: center;
           color: $main-bg-color;
           @media (max-width: $phone) {
-            display: none;
-          }
-        }
-
-        .dispaly {
-          display: none;
-
-          @media (max-width: $phone) {
-            display: block;
             font-size: 28px;
-            font-weight: 700;
             line-height: 38.25px;
             letter-spacing: 2px;
-            text-align: center;
           }
         }
       }
