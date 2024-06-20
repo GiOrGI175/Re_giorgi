@@ -1204,6 +1204,107 @@ body .order {
   order: 2;
 }
 
+body .product_section .product_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .product_section .product_container .product {
+  display: flex;
+  max-width: 1110px;
+  width: 100%;
+}
+body .product_section .product_container .product .img_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 540px;
+  margin-bottom: 52px;
+  padding: 90px 90px;
+  flex: 1;
+  background-color: #f1f1f1;
+}
+@media (max-width: 850px) {
+  body .product_section .product_container .product .img_container {
+    max-width: none;
+    width: 100%;
+    height: 352px;
+  }
+}
+body .product_section .product_container .product .img_container .img {
+  width: 100%;
+  filter: drop-shadow(0px 100px 90px #000000);
+}
+@media (max-width: 850px) {
+  body .product_section .product_container .product .img_container .img {
+    width: 220px;
+    height: 243px;
+  }
+}
+body .product_section .product_container .product .text_Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  max-width: 445px;
+  flex: 1;
+}
+@media (max-width: 850px) {
+  body .product_section .product_container .product .text_Content {
+    max-width: 572px;
+  }
+}
+body .product_section .product_container .product .text_Content span {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.12px;
+  letter-spacing: 10px;
+  text-align: center;
+  color: #d87d4a;
+}
+body .product_section .product_container .product .text_Content h2 {
+  margin-bottom: 32px;
+  max-width: 445px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4px;
+  text-align: left;
+}
+@media (max-width: 850px) {
+  body .product_section .product_container .product .text_Content h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  body .product_section .product_container .product .text_Content h2 {
+    font-size: 28px;
+    line-height: 38.25px;
+  }
+}
+body .product_section .product_container .product .text_Content p {
+  max-width: 445px;
+  margin-bottom: 40px;
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #000000;
+}
+@media (max-width: 850px) {
+  body .product_section .product_container .product .text_Content p {
+    max-width: 572px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
 body footer .footer_container {
   padding: 72px 0px 48px 0px;
   max-width: 100%;

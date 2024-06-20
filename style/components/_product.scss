@@ -1,0 +1,86 @@
+body {
+  .product_section {
+    .product_container {
+      @include flex_drct_jstf_algn_wrp(column, center, center);
+      .product {
+        display: flex;
+        max-width: 1110px;
+        width: 100%;
+
+        .img_container {
+          @include flex_drct_jstf_algn_wrp(column, center, center);
+          max-width: 540px;
+          margin-bottom: 52px;
+          padding: 90px 90px;
+          flex: 1;
+          background-color: $shopBoxClr;
+
+          @media (max-width: $l-tablet) {
+            max-width: none;
+            width: 100%;
+            height: 352px;
+          }
+
+          .img {
+            width: 100%;
+            filter: drop-shadow(0px 100px 90px #000000);
+            @media (max-width: $l-tablet) {
+              width: 220px;
+              height: 243px;
+            }
+          }
+        }
+        .text_Content {
+          @include flex_drct_jstf_algn_wrp(column, center, start);
+          max-width: 445px;
+          flex: 1;
+          @media (max-width: $l-tablet) {
+            max-width: 572px;
+          }
+
+          span {
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19.12px;
+            letter-spacing: 10px;
+            text-align: center;
+            color: $newProductClr;
+          }
+
+          h2 {
+            margin-bottom: 32px;
+            max-width: 445px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 1.4px;
+            text-align: left;
+            @media (max-width: $l-tablet) {
+              text-align: center;
+            }
+            @media (max-width: $phone) {
+              font-size: 28px;
+              line-height: 38.25px;
+            }
+          }
+
+          p {
+            max-width: 445px;
+            margin-bottom: 40px;
+            opacity: 0.5;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 25px;
+            color: $blackClr;
+            @media (max-width: $l-tablet) {
+              max-width: 572px;
+              margin-bottom: 24px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

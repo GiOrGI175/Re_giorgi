@@ -69,6 +69,7 @@ function displayProducts() {
 
     const seeProductBtn = document.createElement('button');
     seeProductBtn.textContent = 'See Product';
+
     seeProductBtn.addEventListener('click', () => {
       seeMore(product.id);
     });
@@ -98,45 +99,42 @@ function displayProducts() {
   btnOpacity();
 
   function seeMore(productId) {
-    window.location.href = `products.html?id=${productId}`;
+    window.location.href = `product.html?id=${productId}`;
   }
 
+  pervBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage = currentPage - 1;
+      window.scrollTo(0, 0);
+      displayProducts();
+    }
+    btnOpacity();
+  });
 
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < Math.ceil(products.length / limit)) {
+      currentPage = currentPage + 1;
+      window.scrollTo(0, 0);
+      displayProducts();
+    }
+    btnOpacity();
+  });
 
-pervBtn.addEventListener('click', () => {
-  if (currentPage > 1) {
-    currentPage = currentPage - 1;
-    window.scrollTo(0, 0);
-    displayProducts();
-  }
-  btnOpacity();
-});
+  function btnOpacity() {
+    if (currentPage === 1) {
+      pervBtn.disabled = true;
+      pervBtn.classList.add('opacity');
+    } else {
+      pervBtn.disabled = false;
+      pervBtn.classList.remove('opacity');
+    }
 
-nextBtn.addEventListener('click', () => {
-  if (currentPage < Math.ceil(products.length / limit)) {
-    currentPage = currentPage + 1;
-    window.scrollTo(0, 0);
-    displayProducts();
-  }
-  btnOpacity();
-});
-
-function btnOpacity() {
-  if (currentPage === 1) {
-    pervBtn.disabled = true;
-    pervBtn.classList.add('opacity');
-  } else {
-    pervBtn.disabled = false;
-    pervBtn.classList.remove('opacity');
-  }
-
-  if (currentPage === Math.ceil(products.length / limit)) {
-    nextBtn.disabled = true;
-    nextBtn.classList.add('opacity');
-  } else {
-    nextBtn.disabled = false;
-    nextBtn.classList.remove('opacity');
+    if (currentPage === Math.ceil(products.length / limit)) {
+      nextBtn.disabled = true;
+      nextBtn.classList.add('opacity');
+    } else {
+      nextBtn.disabled = false;
+      nextBtn.classList.remove('opacity');
+    }
   }
 }
-
-
