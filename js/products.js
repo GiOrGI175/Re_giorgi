@@ -96,11 +96,12 @@ function displayProducts() {
     });
   });
   btnOpacity();
-}
 
-function seeMore(productId) {
-  window.location.href = `products.html?id=${productId}`;
-}
+  function seeMore(productId) {
+    window.location.href = `products.html?id=${productId}`;
+  }
+
+
 
 pervBtn.addEventListener('click', () => {
   if (currentPage > 1) {
@@ -138,33 +139,4 @@ function btnOpacity() {
   }
 }
 
-const urlParams = new URLSearchParams(window.location.search);
 
-const productId = parseInt(urlParams.get('id'));
-
-const product = products.find((p) => p.id === productId);
-
-if (product) {
-  newProductIndicator.textContent = product.new;
-  document.getElementById('products-name').textContent = product.name;
-
-  document.getElementById('products-description').textContent =
-    product.description;
-
-  document.getElementById('products-price').textContent = product.price;
-} else {
-  document.querySelector('.products-details').textContent =
-    '404 product not found';
-}
-
-// const urlParams = new URLSearchParams(window.location.search);
-
-// const productId = parseInt(urlParams.get('id'));
-
-// let url = 'products.json';
-
-// const individproduct = url.find((p) => p.id === productId);
-
-// if (individproduct) {
-//   console.log('new pg');
-// }
