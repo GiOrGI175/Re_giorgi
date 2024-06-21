@@ -148,6 +148,10 @@ button {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Noto Sans Georgian";
   src: url("../../essets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf");
