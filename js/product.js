@@ -33,6 +33,29 @@ async function adIindividualPage() {
       const price = document.getElementById('productPrice');
       price.textContent = `$ ${product.price}`;
 
+      const quantityInput = document.querySelector('.input_elemnt');
+      quantityInput.id = `quantity-${product.id}`;
+
+      const decrementButton = document.getElementById('decr');
+
+      const incrementButton = document.getElementById('incr');
+
+      incrementButton.addEventListener('click', () =>
+        incrementQuantity(product.id)
+      );
+
+      decrementButton.addEventListener('click', () =>
+        decrementQuantity(product.id)
+      );
+
+      const addButton = docuemn.querySelector('.add_btn');
+      addButton.addEventListener('click', () => {
+        const quantity = parseInt(
+          document.querySelector(`#quantity-${product.id}`).value
+        );
+        addToCart({ ...product, quantity });
+      });
+
       const imgArray = product.additionalImages;
 
       const imgContainer = document.getElementById('imgContainer');
@@ -56,3 +79,42 @@ async function adIindividualPage() {
   }
 }
 adIindividualPage();
+
+function incrementQuantity(id) {
+  const quantityInput = document.querySelector(`#quantity-${id}`);
+  quantityInput.value = parseInt(quantityInput.value) + 1;
+}
+
+function decrementQuantity(id) {
+  const quantityInput = document.querySelector(`#quantity-${id}`);
+  if (parseInt(quantityInput.value) > 1) {
+    quantityInput.value = parseInt(quantityInput.value) - 1;
+  }
+}
+
+function addToCart(product) {
+  console.log(product);
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const productindex = cart.findIndex((p) => p.id === product.id);
+
+  if (productindex >= 0) {
+    cart[productindex].quantity += product.quantity;
+  } else {
+    cart.push;
+  }
+
+  localStorage.setItem('cart ', JSON.stringify(cart));
+
+  updateCartPopup();
+}
+
+function calculateTotalPrice(cart) {
+  return cart.reduce((sum, p) => sum + Number(p.quantity), 0);
+}
+
+function calculateTotalQuantity(cart) {
+  return cart.reduce((sum, p) => sum + Number(p.quantity), 0);
+}
+
+function updateCartPopup() {}

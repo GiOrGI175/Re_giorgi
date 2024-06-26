@@ -151,3 +151,9 @@ button {
 html {
   scroll-behavior: smooth;
 }
+
+input[type='text'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

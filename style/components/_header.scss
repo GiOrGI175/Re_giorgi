@@ -166,5 +166,30 @@ body {
         background-color: $main-bg-color;
       }
     }
+
+    .popup {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      width: 377px;
+      top: 130px;
+      left: 62%;
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 10px;
+      z-index: 2;
+      transition: opacity 0.5s, visibility 0s 0.5s;
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+      }
+
+      .item {
+        display: block;
+        margin-top: 25px;
+      }
+    }
   }
 }

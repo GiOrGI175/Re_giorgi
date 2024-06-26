@@ -147,6 +147,7 @@ body {
               margin-right: 16px;
               @include flex_drct_jstf_algn_wrp(row, center, center);
               button {
+                width: 40px;
                 height: 48px;
                 flex: 1;
                 border: none;
@@ -158,10 +159,14 @@ body {
                 }
               }
 
-              div {
+              .input_elemnt {
                 @include flex_drct_jstf_algn_wrp(row, center, center);
+                width: 40px;
                 height: 48px;
+                border: none;
                 flex: 1;
+                padding-left: 15px;
+                text-align: center;
                 background-color: $shopBoxClr;
               }
             }
