@@ -186,6 +186,9 @@ body main .container .text_continer .text_content h2 {
   margin-top: 40px;
 }
 
+body header {
+  height: 100px;
+}
 body header .header_container {
   max-width: 100%;
   height: 100px;
@@ -355,9 +358,9 @@ body header .underline_container .underline {
 body header .popup {
   opacity: 0;
   visibility: hidden;
-  position: fixed;
+  position: relative;
   width: 377px;
-  top: 130px;
+  top: 30px;
   left: 62%;
   background-color: #f8f8f8;
   border: 1px solid #ddd;
