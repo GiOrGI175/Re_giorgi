@@ -110,7 +110,7 @@ function addToCart(product) {
 }
 
 function calculateTotalPrice(cart) {
-  return cart.reduce((sum, p) => sum + Number(p.quantity), 0);
+  return cart.reduce((sum, p) => sum + Number(p.price) * Number(p.quantity), 0);
 }
 
 function calculateTotalQuantity(cart) {
@@ -119,8 +119,6 @@ function calculateTotalQuantity(cart) {
 
 function updateCartPopup() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  console.log(`rame${cart}`);
 
   let total = calculateTotalPrice(cart);
 
@@ -132,37 +130,51 @@ function updateCartPopup() {
 
   popup.textContent = '';
 
+  const productBoxContainer = document.createElement('div');
+  productBoxContainer.className = 'productBox_Container';
+
   cart.forEach((product, index) => {
     console.log(product);
     const productBox = document.createElement('div');
+    productBox.className = 'product_Box';
+
+    const textContainer = document.createElement('div');
+    textContainer.className = 'text_container';
+
+    const NamePriceBox = document.createElement('div');
+    NamePriceBox.className = 'Name_price_container';
+
+    const quantityREmoveBox = document.createElement('div');
+    quantityREmoveBox.className = 'quantity_remove_container';
 
     const imgBox = document.createElement('div');
-
-    const nameAndPriceBox = document.createElement('div');
-    nameAndPriceBox.className = 'name_price_container';
 
     const img = document.createElement('img');
     img.src = `essets/webp/main/products_page/${product.img}`;
     imgBox.appendChild(img);
+    imgBox.className = 'imgbox';
     productBox.appendChild(imgBox);
 
     const name = document.createElement('h2');
     name.textContent = product.name;
-    nameAndPriceBox.appendChild(name);
+    NamePriceBox.appendChild(name);
 
     const price = document.createElement('span');
     price.textContent = product.price;
-    nameAndPriceBox.appendChild(price);
+    price.className = 'price';
+    NamePriceBox.appendChild(price);
 
-    productBox.appendChild(nameAndPriceBox);
+    textContainer.appendChild(NamePriceBox);
 
     const quantity = document.createElement('span');
     quantity.textContent = product.quantity;
-    quantity.className = 'price';
-    productBox.appendChild(quantity);
+    quantity.className = 'quantity';
+    quantityREmoveBox.appendChild(quantity);
 
     const button = document.createElement('button');
+    button.className = 'removebtn';
     button.textContent = 'Remove';
+
     button.addEventListener('click', function () {
       cart.splice(index, 1);
 
@@ -171,10 +183,53 @@ function updateCartPopup() {
       updateCartPopup();
     });
 
-    console.log(productBox);
-    productBox.appendChild(button);
+    quantityREmoveBox.appendChild(button);
+    productBox.appendChild(textContainer);
+    productBox.appendChild(quantityREmoveBox);
 
-    console.log(productBox);
-    popup.appendChild(productBox);
+    productBoxContainer.appendChild(productBox);
+
+    popup.appendChild(productBoxContainer);
   });
+
+  const popupHead = document.createElement('div');
+  popupHead.className = 'popupHead';
+
+  const totalElemnts = document.createElement('div');
+  totalElemnts.textContent = `CART (${items})`;
+  popupHead.appendChild(totalElemnts);
+
+  const removeAllElemnt = document.createElement('button');
+  removeAllElemnt.textContent = 'Remove all';
+  removeAllElemnt.addEventListener('click', function removeremoveAllElemnts() {
+    localStorage.removeItem('cart');
+
+    cart = [];
+
+    if ((cart = [])) {
+      productBoxContainer.textContent = '';
+    }
+  });
+  popupHead.appendChild(removeAllElemnt);
+
+  popup.appendChild(popupHead);
+
+  const totalpPrice = document.createElement('div');
+  totalpPrice.className = 'price_container';
+
+  const priceBox = document.createElement('p');
+  priceBox.textContent = 'TOTAL';
+  totalpPrice.appendChild(priceBox);
+
+  const totalpriceBox = document.createElement('span');
+  totalpriceBox.textContent = `$${total}`;
+  totalpPrice.appendChild(totalpriceBox);
+
+  popup.appendChild(totalpPrice);
+
+  const checkBtn = document.createElement('button');
+  checkBtn.textContent = 'CHECKOUT';
+  checkBtn.className = 'check';
+
+  popup.appendChild(checkBtn);
 }

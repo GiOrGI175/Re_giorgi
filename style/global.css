@@ -356,6 +356,7 @@ body header .underline_container .underline {
   background-color: #fff;
 }
 body header .popup {
+  display: flex;
   opacity: 0;
   visibility: hidden;
   position: relative;
@@ -367,6 +368,11 @@ body header .popup {
   padding: 10px;
   z-index: 2;
   transition: opacity 0.5s, visibility 0s 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 body header .popup.show {
   opacity: 1;
@@ -376,6 +382,161 @@ body header .popup.show {
 body header .popup .item {
   display: block;
   margin-top: 25px;
+}
+body header .popup .productBox_Container {
+  max-width: 313px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .productBox_Container .product_Box {
+  max-width: 313px;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .productBox_Container .product_Box .imgbox {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  padding: 12px;
+  margin-right: 17px;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .productBox_Container .product_Box .imgbox img {
+  width: 36px;
+  height: 40px;
+}
+body header .popup .productBox_Container .product_Box .text_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .productBox_Container .product_Box .text_container .Name_price_container h2 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: left;
+}
+body header .popup .productBox_Container .product_Box .text_container .Name_price_container .price {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: left;
+  opacity: 0.5;
+}
+body header .popup .productBox_Container .product_Box .quantity_remove_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .productBox_Container .product_Box .quantity_remove_container .quantity {
+  margin-right: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+body header .popup .productBox_Container .product_Box .quantity_remove_container .removebtn {
+  width: 60px;
+  height: 32px;
+  border: none;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13.66px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+body header .popup .popupHead {
+  max-width: 313px;
+  width: 100%;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  order: -1;
+}
+body header .popup .popupHead div {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.59px;
+  letter-spacing: 1.2px;
+  text-align: left;
+}
+body header .popup .popupHead button {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+body header .popup .popupHead button:hover {
+  color: #d87d4a;
+  text-decoration: underline;
+}
+body header .popup .price_container {
+  max-width: 313px;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body header .popup .price_container p {
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+}
+body header .popup .price_container span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.59px;
+  text-align: center;
+  color: #000000;
+}
+body header .popup .check {
+  max-width: 313px;
+  height: 48px;
+  width: 100%;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #d87d4a;
+  transition: all 0.5s ease-in-out;
+}
+body header .popup .check:hover {
+  background-color: #fbaf85;
+  color: #fff;
 }
 
 body main {
