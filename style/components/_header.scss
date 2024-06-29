@@ -12,6 +12,7 @@ body {
         max-width: 1110px;
         width: 100%;
         background-color: $mackgroundClr;
+        padding: 0px 20px;
         @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
         @media (max-width: $l-tablet) {
@@ -167,176 +168,183 @@ body {
         background-color: $main-bg-color;
       }
     }
-
-    .popup {
-      display: flex;
-      opacity: 0;
-      visibility: hidden;
-      position: relative;
-      width: 377px;
-      top: 30px;
-      left: 62%;
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
-      padding: 10px;
-      z-index: 2;
-      transition: opacity 0.5s, visibility 0s 0.5s;
-      @include flex_drct_jstf_algn_wrp(column, center, center);
-
-      &.show {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s;
-      }
-
-      .item {
-        display: block;
-        margin-top: 25px;
-      }
-
-      .productBox_Container {
-        max-width: 313px;
+    .container {
+      @include flex_drct_jstf_algn_wrp(row, center, center);
+      .popup_container {
+        max-width: 1110px;
         width: 100%;
-        @include flex_drct_jstf_algn_wrp(column, space-between, center);
+        position: absolute;
+        @include flex_drct_jstf_algn_wrp(row, end, center);
+        .popup {
+          display: flex;
+          opacity: 0;
+          visibility: hidden;
+          position: relative;
+          width: 377px;
+          top: 30px;
+          background-color: #f8f8f8;
+          border: 1px solid #ddd;
+          padding: 10px;
+          z-index: 2;
+          transition: opacity 0.5s, visibility 0s 0.5s;
+          @include flex_drct_jstf_algn_wrp(column, center, center);
 
-        .product_Box {
-          max-width: 313px;
-          width: 100%;
-          margin-bottom: 24px;
-          @include flex_drct_jstf_algn_wrp(row, space-between, center);
-
-          .imgbox {
-            width: 64px;
-            height: 64px;
-            border-radius: 8px;
-            padding: 12px;
-            margin-right: 17px;
-            background-color: $shopBoxClr;
-            @include flex_drct_jstf_algn_wrp(column, center, center);
-
-            img {
-              width: 36px;
-              height: 40px;
-            }
+          &.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s;
           }
 
-          .text_container {
+          .item {
+            display: block;
+            margin-top: 25px;
+          }
+
+          .productBox_Container {
+            max-width: 313px;
             width: 100%;
-            @include flex_drct_jstf_algn_wrp(row, space-between, center);
+            @include flex_drct_jstf_algn_wrp(column, space-between, center);
 
-            .Name_price_container {
-              h2 {
-                font-size: 15px;
-                font-weight: 700;
-                line-height: 25px;
-                text-align: left;
+            .product_Box {
+              max-width: 313px;
+              width: 100%;
+              margin-bottom: 24px;
+              @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+              .imgbox {
+                width: 64px;
+                height: 64px;
+                border-radius: 8px;
+                padding: 12px;
+                margin-right: 17px;
+                background-color: $shopBoxClr;
+                @include flex_drct_jstf_algn_wrp(column, center, center);
+
+                img {
+                  width: 36px;
+                  height: 40px;
+                }
               }
 
-              .price {
-                font-size: 14px;
-                font-weight: 700;
-                line-height: 25px;
-                text-align: left;
-                opacity: 0.5;
+              .text_container {
+                width: 100%;
+                @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+                .Name_price_container {
+                  h2 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 25px;
+                    text-align: left;
+                  }
+
+                  .price {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 25px;
+                    text-align: left;
+                    opacity: 0.5;
+                  }
+                }
+              }
+
+              .quantity_remove_container {
+                @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+                .quantity {
+                  margin-right: 18px;
+                  font-size: 13px;
+                  font-weight: 700;
+                  line-height: 17.76px;
+                  letter-spacing: 1px;
+                  text-align: center;
+                }
+
+                .removebtn {
+                  width: 60px;
+                  height: 32px;
+                  border: none;
+                  font-size: 10px;
+                  font-weight: 700;
+                  line-height: 13.66px;
+                  letter-spacing: 1px;
+                  text-align: center;
+                  background-color: $shopBoxClr;
+                }
               }
             }
           }
-
-          .quantity_remove_container {
+          .popupHead {
+            max-width: 313px;
+            width: 100%;
+            margin-bottom: 32px;
             @include flex_drct_jstf_algn_wrp(row, space-between, center);
+            order: -1;
 
-            .quantity {
-              margin-right: 18px;
-              font-size: 13px;
+            div {
+              font-size: 18px;
               font-weight: 700;
-              line-height: 17.76px;
-              letter-spacing: 1px;
-              text-align: center;
+              line-height: 24.59px;
+              letter-spacing: 1.2px;
+              text-align: left;
             }
 
-            .removebtn {
-              width: 60px;
-              height: 32px;
+            button {
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 25px;
+              text-align: left;
               border: none;
-              font-size: 10px;
-              font-weight: 700;
-              line-height: 13.66px;
-              letter-spacing: 1px;
-              text-align: center;
-              background-color: $shopBoxClr;
+              background-color: transparent;
+              transition: all 0.5s ease-in-out;
+
+              &:hover {
+                color: $btnColor;
+                text-decoration: underline;
+              }
             }
           }
-        }
-      }
-      .popupHead {
-        max-width: 313px;
-        width: 100%;
-        margin-bottom: 32px;
-        @include flex_drct_jstf_algn_wrp(row, space-between, center);
-        order: -1;
+          .price_container {
+            max-width: 313px;
+            width: 100%;
+            margin-bottom: 24px;
+            @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
-        div {
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 24.59px;
-          letter-spacing: 1.2px;
-          text-align: left;
-        }
+            p {
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+              text-align: left;
+            }
 
-        button {
-          font-size: 15px;
-          font-weight: 500;
-          line-height: 25px;
-          text-align: left;
-          border: none;
-          background-color: transparent;
-          transition: all 0.5s ease-in-out;
-
-          &:hover {
-            color: $btnColor;
-            text-decoration: underline;
+            span {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              text-align: center;
+              color: $blackClr;
+            }
           }
-        }
-      }
-      .price_container {
-        max-width: 313px;
-        width: 100%;
-        margin-bottom: 24px;
-        @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
-        p {
-          opacity: 0.5;
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 25px;
-          text-align: left;
-        }
+          .check {
+            max-width: 313px;
+            height: 48px;
+            width: 100%;
+            border: none;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 17.76px;
+            letter-spacing: 1px;
+            text-align: center;
+            background-color: $btnColor;
+            transition: all 0.5s ease-in-out;
 
-        span {
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 24.59px;
-          text-align: center;
-          color: $blackClr;
-        }
-      }
-
-      .check {
-        max-width: 313px;
-        height: 48px;
-        width: 100%;
-        border: none;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 17.76px;
-        letter-spacing: 1px;
-        text-align: center;
-        background-color: $btnColor;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-          background-color: $btnHoverClr;
-          color: $main-bg-color;
+            &:hover {
+              background-color: $btnHoverClr;
+              color: $main-bg-color;
+            }
+          }
         }
       }
     }

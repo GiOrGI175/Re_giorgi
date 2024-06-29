@@ -1,5 +1,6 @@
 body {
   .product_section {
+    padding: 0px 15px;
     .product_container {
       @include flex_drct_jstf_algn_wrp(column, center, center);
 
@@ -8,7 +9,8 @@ body {
         max-width: 1110px;
         width: 100%;
         margin: 80px 0px 55px 0px;
-        @media (max-width: $tablet) {
+
+        @media (max-width: $l-tablet) {
           max-width: 689px;
         }
         @media (max-width: $phone) {
@@ -32,13 +34,15 @@ body {
         display: flex;
         max-width: 1110px;
         width: 100%;
+
         @include flex_drct_jstf_algn_wrp(row, space-between, center);
-        @media (max-width: $tablet) {
-          max-width: 689px;
+        @media (max-width: $l-tablet) {
+          // max-width: 689px;
         }
 
         @media (max-width: $phone) {
-          max-width: 327px;
+          // max-width: 327px;
+          padding: 0px 24px;
           @include flex_drct_jstf_algn_wrp(column, center, center);
         }
 
@@ -49,141 +53,160 @@ body {
           padding: 90px 90px;
           flex: 1;
           background-color: $shopBoxClr;
-          @media (max-width: $tablet) {
+          @media (max-width: $l-tablet) {
             flex: none;
             width: 281px;
             height: 480px;
             padding: 0px 0px;
           }
           @media (max-width: $phone) {
-            width: 327px;
+            max-width: 3027px;
+            width: 100%;
             height: 327px;
           }
 
           img {
+            // max-width: none;
             width: 100%;
+            // height: 352px;
             filter: drop-shadow(0px 100px 90px #000000);
-            @media (max-width: $tablet) {
-              width: 181px;
-              height: 200px;
-            }
+            // @media (max-width: $l-tablet) {
+            //   width: 181px;
+            //   height: 200px;
+            // }
             @media (max-width: $phone) {
               width: 181px;
-              height: 215px;
+              height: 201px;
             }
           }
         }
-        .text_Content {
-          padding: 0px 40px 0px 145px;
-          @include flex_drct_jstf_algn_wrp(column, center, start);
+        .text_container {
           flex: 1;
-          @media (max-width: $tablet) {
-            flex: none;
-            max-width: 340px;
-            padding: 0px 0px 0px 0px;
-          }
-          // @media (max-width: $phone) {
-          //   max-width: 327px;
-          // }
+          @include flex_drct_jstf_algn_wrp(row, end, center);
 
-          span {
-            margin-bottom: 16px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 19.12px;
-            letter-spacing: 10px;
-            text-align: center;
-            color: $newProductClr;
-          }
+          @media (max-width: $phone) {
+            max-width: 100%;
 
-          h2 {
-            margin-bottom: 32px;
-            max-width: 445px;
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 44px;
-            letter-spacing: 1.4px;
-            text-align: left;
-
-            @media (max-width: $phone) {
-              font-size: 28px;
-              line-height: 38.25px;
-            }
-          }
-
-          p {
-            max-width: 445px;
-            margin-bottom: 32px;
-            opacity: 0.5;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 25px;
-            color: $blackClr;
-            @media (max-width: $tablet) {
-              max-width: 339px;
-              text-align: left;
-            }
-          }
-
-          .price {
-            margin-bottom: 47px;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 24.59px;
-            letter-spacing: 1.2px;
-            text-align: left;
-            color: $blackClr;
-            @media (max-width: $tablet) {
-              margin-bottom: 32px;
-            }
-          }
-
-          .btn_container {
             @include flex_drct_jstf_algn_wrp(row, center, center);
+          }
+          .text_Content {
+            width: 340px; // padding: 0px 40px 0px 145px;
+            @include flex_drct_jstf_algn_wrp(column, center, start);
 
-            .btnbox {
-              width: 120px;
-              height: 48px;
-              margin-right: 16px;
+            @media (max-width: $tablet) {
+              flex: none;
+              max-width: 340px;
+              width: 100%;
+              padding: 0px 0px 0px 0px;
+            }
+            // @media (max-width: $phone) {
+            //   max-width: 100%;
+            //   padding: 0px 24px;
+            // }
+
+            span {
+              margin-bottom: 16px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 19.12px;
+              letter-spacing: 10px;
+              text-align: center;
+              color: $newProductClr;
+            }
+
+            h2 {
+              margin-bottom: 32px;
+              max-width: 445px;
+              font-size: 40px;
+              font-weight: 700;
+              line-height: 44px;
+              letter-spacing: 1.4px;
+              text-align: left;
+
+              @media (max-width: $phone) {
+                font-size: 28px;
+                line-height: 38.25px;
+              }
+            }
+
+            p {
+              max-width: 445px;
+              margin-bottom: 32px;
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 25px;
+              color: $blackClr;
+              @media (max-width: $l-tablet) {
+                max-width: 339px;
+                text-align: left;
+              }
+            }
+
+            .price {
+              margin-bottom: 47px;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              letter-spacing: 1.2px;
+              text-align: left;
+              color: $blackClr;
+              @media (max-width: $l-tablet) {
+                margin-bottom: 32px;
+              }
+            }
+
+            .btn_container {
               @include flex_drct_jstf_algn_wrp(row, center, center);
-              button {
-                width: 40px;
+              @media (max-width: $phone) {
+                @include flex_drct_jstf_algn_wrp(row, center, center, wrap);
+              }
+
+              .btnbox {
+                width: 120px;
                 height: 48px;
-                flex: 1;
-                border: none;
-                background-color: $shopBoxClr;
-                span {
-                  color: $blackClr;
-                  opacity: 0.25;
-                  letter-spacing: 0px;
+                margin-right: 16px;
+                @include flex_drct_jstf_algn_wrp(row, center, center);
+
+                button {
+                  width: 40px;
+                  height: 48px;
+                  flex: 1;
+                  border: none;
+                  background-color: $shopBoxClr;
+                  span {
+                    color: $blackClr;
+                    opacity: 0.25;
+                    letter-spacing: 0px;
+                  }
+                }
+
+                .input_elemnt {
+                  @include flex_drct_jstf_algn_wrp(row, center, center);
+                  width: 40px;
+                  height: 48px;
+                  border: none;
+                  flex: 1;
+                  padding-left: 15px;
+                  text-align: center;
+                  background-color: $shopBoxClr;
                 }
               }
-
-              .input_elemnt {
-                @include flex_drct_jstf_algn_wrp(row, center, center);
-                width: 40px;
+              button {
+                width: 160px;
                 height: 48px;
                 border: none;
-                flex: 1;
-                padding-left: 15px;
-                text-align: center;
-                background-color: $shopBoxClr;
-              }
-            }
-            button {
-              width: 160px;
-              height: 48px;
-              border: none;
-              font-size: 13px;
-              font-weight: 700;
-              line-height: 17.76px;
-              letter-spacing: 1px;
-              color: $main-bg-color;
-              background-color: $btnColor;
-              transition: all 0.5s ease-in-out;
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 17.76px;
+                letter-spacing: 1px;
+                color: $main-bg-color;
+                background-color: $btnColor;
+                transition: all 0.5s ease-in-out;
 
-              &:hover {
-                background-color: $btnHoverClr;
+                &:hover {
+                  background-color: $btnHoverClr;
+                }
               }
             }
           }
@@ -194,12 +217,12 @@ body {
         max-width: 1110px;
         width: 100%;
         margin-top: 120px;
-        @media (max-width: $tablet) {
+        @media (max-width: $l-tablet) {
           max-width: 689px;
           @include flex_drct_jstf_algn_wrp(column, center, center);
         }
         @media (max-width: $phone) {
-          max-width: 327px;
+          padding: 0px 24px;
         }
 
         h2 {

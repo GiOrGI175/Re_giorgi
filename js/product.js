@@ -201,15 +201,7 @@ function updateCartPopup() {
 
   const removeAllElemnt = document.createElement('button');
   removeAllElemnt.textContent = 'Remove all';
-  removeAllElemnt.addEventListener('click', function removeremoveAllElemnts() {
-    localStorage.removeItem('cart');
 
-    cart = [];
-
-    if ((cart = [])) {
-      productBoxContainer.textContent = '';
-    }
-  });
   popupHead.appendChild(removeAllElemnt);
 
   popup.appendChild(popupHead);
@@ -232,4 +224,18 @@ function updateCartPopup() {
   checkBtn.className = 'check';
 
   popup.appendChild(checkBtn);
+
+  removeAllElemnt.addEventListener('click', function removeremoveAllElemnts() {
+    localStorage.removeItem('cart');
+
+    cart = [];
+
+    if ((cart = [])) {
+      productBoxContainer.textContent = '';
+
+      totalpriceBox.textContent = `$${(total = 0)}`;
+
+      totalElemnts.textContent = `CART (${(items = 0)})`;
+    }
+  });
 }

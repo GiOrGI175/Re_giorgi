@@ -30,10 +30,10 @@
           <div class="navigation">
             <nav>
               <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#ourinfo">PRODUCTS</a></li>
-                <li><a href="#">FEEDBACK</a></li>
-                <li><a href="#">SALES</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="index.html">FEEDBACK</a></li>
+                <li><a href="index.html">SALES</a></li>
               </ul>
             </nav>
           </div>
@@ -61,9 +61,12 @@
       <div class="underline_container">
         <div class="underline"></div>
       </div>
-      <div class="popup">
-        <span class="close-btn">&times;</span>
-        <p>Your cart items will be displayed here.</p>
+      <div class="container">
+        <div class="popup_container">
+          <div class="popup">
+            <p>Your cart items will be displayed here.</p>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -76,22 +79,24 @@
           <div class="imgbox">
             <img src="" alt="" class="peoduct_img" />
           </div>
-          <div class="text_Content">
-            <span id="newProduct"></span>
-            <h2 id="productName"></h2>
-            <p id="productinfo"></p>
-            <span class="price" id="productPrice"></span>
-            <div class="btn_container">
-              <div class="btnbox">
-                <button id="decr">
-                  <span>-</span>
-                </button>
-                <input type="number" value="1" min="1" class="input_elemnt" />
-                <button id="incr">
-                  <span>+</span>
-                </button>
+          <div class="text_container">
+            <div class="text_Content">
+              <span id="newProduct"></span>
+              <h2 id="productName"></h2>
+              <p id="productinfo"></p>
+              <span class="price" id="productPrice"></span>
+              <div class="btn_container">
+                <div class="btnbox">
+                  <button id="decr">
+                    <span>-</span>
+                  </button>
+                  <input type="number" value="1" min="1" class="input_elemnt" />
+                  <button id="incr">
+                    <span>+</span>
+                  </button>
+                </div>
+                <button class="add_btn">ADD TO CART</button>
               </div>
-              <button class="add_btn">ADD TO CART</button>
             </div>
           </div>
         </div>

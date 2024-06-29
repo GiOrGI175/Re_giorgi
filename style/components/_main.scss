@@ -23,6 +23,7 @@ body {
 
         .text_content {
           flex: 0.4;
+          padding-left: 20px;
 
           @media (max-width: $l-tablet) {
             flex: auto;
@@ -131,6 +132,7 @@ body {
     overflow: hidden;
 
     .container_2 {
+      padding: 0px 20px;
       @media (max-width: $l-tablet) {
         padding: 0px 40px;
       }
@@ -217,6 +219,8 @@ body {
     overflow: hidden;
     .container_3 {
       @include flex_drct_jstf_algn_wrp(row, center, none);
+      padding: 0px 20px;
+
       @media (max-width: $l-tablet) {
         padding: 0px 40px;
       }
@@ -316,6 +320,13 @@ body {
   }
   .feedback_section {
     overflow: hidden;
+    padding: 0px 20px;
+    @media (max-width: $l-tablet) {
+      padding: 0px 40px;
+    }
+    @media (max-width: $phone) {
+      padding: 0px 24px;
+    }
 
     .container_4 {
       @include flex_drct_jstf_algn_wrp(column, none, center);
@@ -405,6 +416,13 @@ body {
   }
   .sale_data_section {
     overflow: hidden;
+    padding: 0px 20px;
+    @media (max-width: $l-tablet) {
+      padding: 0px 40px;
+    }
+    @media (max-width: $phone) {
+      padding: 0px 24px;
+    }
 
     .container_5 {
       @include flex_drct_jstf_algn_wrp(column, none, center);
