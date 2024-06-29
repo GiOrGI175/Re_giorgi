@@ -1,6 +1,9 @@
 body {
   header {
     height: 100px;
+    position: relative;
+    z-index: 3;
+
     .header_container {
       max-width: 100%;
       height: 100px;
@@ -179,6 +182,14 @@ body {
         padding: 0px 20px;
         // position: absolute;
         @include flex_drct_jstf_algn_wrp(row, end, start);
+        @media (max-width: $l-tablet) {
+          padding: 0px 40px;
+        }
+        @media (max-width: $phone) {
+          padding: 0px;
+          @include flex_drct_jstf_algn_wrp(row, center, start);
+        }
+
         .popup {
           opacity: 0;
           visibility: hidden;
@@ -189,7 +200,7 @@ body {
           background-color: #f8f8f8;
           border: 1px solid #ddd;
           padding: 10px;
-          z-index: 2;
+          z-index: 3;
           transition: opacity 0.5s, visibility 0s 0.5s;
           @include flex_drct_jstf_algn_wrp(column, center, center);
 

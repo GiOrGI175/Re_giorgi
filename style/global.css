@@ -188,6 +188,8 @@ body main .container .text_continer .text_content h2 {
 
 body header {
   height: 100px;
+  position: relative;
+  z-index: 3;
 }
 body header .header_container {
   max-width: 100%;
@@ -376,6 +378,21 @@ body header .container .popup_container {
   align-items: start;
   flex-wrap: nowrap;
 }
+@media (max-width: 850px) {
+  body header .container .popup_container {
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 720px) {
+  body header .container .popup_container {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+  }
+}
 body header .container .popup_container .popup {
   opacity: 0;
   visibility: hidden;
@@ -384,7 +401,7 @@ body header .container .popup_container .popup {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: 10px;
-  z-index: 2;
+  z-index: 3;
   transition: opacity 0.5s, visibility 0s 0.5s;
   display: flex;
   flex-direction: column;
@@ -557,6 +574,9 @@ body header .container .popup_container .popup .check:hover {
   color: #fff;
 }
 
+body.no_scroll {
+  overflow: hidden;
+}
 body main {
   background-color: #0e0e0e;
 }
@@ -1205,6 +1225,19 @@ body .sale_data_section .container_5 .content .time_data .data_box p {
   text-align: center;
   color: #fff;
 }
+body .overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+body .overlay.active {
+  display: block;
+}
 
 body .products_main {
   margin-bottom: 160px;
@@ -1443,6 +1476,19 @@ body .opacity {
 }
 body .order {
   order: 2;
+}
+body .overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+body .overlay.active {
+  display: block;
 }
 
 body .product_section {
@@ -1868,6 +1914,20 @@ body .product_section .product_container .img_list .imgBox_3 {
        object-fit: cover;
   }
 }
+body .overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+body .overlay.active {
+  display: block;
+}
+
 body footer .footer_container {
   padding: 72px 20px 48px 20px;
   max-width: 100%;

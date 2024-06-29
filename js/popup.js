@@ -2,8 +2,18 @@ let shoppingCartIcon = document.querySelector('.cart');
 
 shoppingCartIcon.addEventListener('click', () => {
   document.querySelector('.popup').classList.toggle('show');
+  document.querySelector('.overlay').classList.toggle('active');
+  document.body.classList.toggle('no_scroll');
 
   updateCartPopup();
+});
+
+let overlay = document.querySelector('.overlay');
+
+overlay.addEventListener('click', () => {
+  document.querySelector('.popup').classList.toggle('show');
+  document.querySelector('.overlay').classList.toggle('active');
+  document.body.classList.toggle('no_scroll');
 });
 
 let popupcart = JSON.parse(localStorage.getItem('cart'));
