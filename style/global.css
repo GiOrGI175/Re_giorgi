@@ -337,6 +337,7 @@ body header .header_container .header_content .cart a:hover .cart_svg path {
 }
 body header .underline_container {
   background-color: #0e0e0e;
+  padding: 0px 20px;
 }
 @media (max-width: 850px) {
   body header .underline_container {
@@ -357,6 +358,7 @@ body header .underline_container .underline {
   background-color: #fff;
 }
 body header .container {
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -366,20 +368,19 @@ body header .container {
 body header .container .popup_container {
   max-width: 1110px;
   width: 100%;
-  position: absolute;
+  height: 50px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: row;
   justify-content: end;
-  align-items: center;
+  align-items: start;
   flex-wrap: nowrap;
 }
 body header .container .popup_container .popup {
-  display: flex;
   opacity: 0;
   visibility: hidden;
-  position: relative;
   width: 377px;
-  top: 30px;
+  margin-top: 30px;
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: 10px;
@@ -595,6 +596,7 @@ body main .container .text_continer .text_content {
 }
 @media (max-width: 850px) {
   body main .container .text_continer .text_content {
+    padding-left: 0px;
     flex: auto;
     position: absolute;
     z-index: 1;

@@ -26,6 +26,7 @@ body {
           padding-left: 20px;
 
           @media (max-width: $l-tablet) {
+            padding-left: 0px;
             flex: auto;
             position: absolute;
             z-index: 1;
