@@ -129,11 +129,15 @@ function updateCartPopup() {
 
   popup.appendChild(totalpPrice);
 
+  const link = document.createElement('a');
+  link.href = 'checkout.html';
+
   const checkBtn = document.createElement('button');
   checkBtn.textContent = 'CHECKOUT';
   checkBtn.className = 'check';
 
-  popup.appendChild(checkBtn);
+  link.appendChild(checkBtn);
+  popup.appendChild(link);
 
   removeAllElemnt.addEventListener('click', function removeremoveAllElemnts() {
     localStorage.removeItem('cart');

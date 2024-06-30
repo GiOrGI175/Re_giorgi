@@ -1,0 +1,104 @@
+body {
+  background-color: #f1f1f1;
+  .card_Info {
+    .card_info_container {
+      border: 10px solid rgb(244, 0, 0);
+      @include flex_drct_jstf_algn_wrp(column, center, center);
+      .back_container {
+        display: flex;
+        max-width: 1110px;
+        width: 100%;
+        margin: 80px 0px 55px 0px;
+
+        @media (max-width: $l-tablet) {
+          max-width: 689px;
+        }
+        @media (max-width: $phone) {
+          max-width: 327px;
+        }
+        a {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 25px;
+          text-align: left;
+          color: $blackClr;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            color: $btnColor;
+          }
+        }
+      }
+      .rowBox {
+        @include flex_drct_jstf_algn_wrp(row, space-between, center);
+        .valaidation_container {
+          display: flex;
+          max-width: 1110px;
+          width: 100%;
+
+          border: 1px solid black;
+
+          .valaidation {
+            max-width: 730px;
+
+            border: 1px solid violet;
+
+            width: 100%;
+            height: 1340px;
+            background-color: #ffffff;
+
+            h2 {
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 36px;
+              letter-spacing: 1.1px;
+              text-align: left;
+            }
+
+            form {
+              .billing_details_container {
+                h3 {
+                  font-size: 13px;
+                  font-weight: 700;
+                  line-height: 25px;
+                  letter-spacing: 0.9px;
+                  text-align: left;
+                  color: $btnColor;
+                }
+                .input_continer_1 {
+                  @include flex_drct_jstf_algn_wrp(row, center, center);
+                  .nameBox {
+                    @include flex_drct_jstf_algn_wrp(column, center, center);
+                    p {
+                      font-size: 12px;
+                      font-weight: 700;
+                      line-height: 16.39px;
+                      letter-spacing: -0.2px;
+                      text-align: left;
+                      color: $blackClr;
+                    }
+                    input {
+                      width: 309px;
+                      height: 58px;
+                      border: 1px solid $inputBorderClr;
+
+                      &::placeholder {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 19.12px;
+                        letter-spacing: -0.25px;
+                        color: $blackClr;
+                        opacity: 0.4;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

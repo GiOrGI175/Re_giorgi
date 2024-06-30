@@ -342,22 +342,27 @@ body {
             }
           }
 
-          .check {
+          a {
             max-width: 313px;
             height: 48px;
             width: 100%;
-            border: none;
-            font-size: 13px;
-            font-weight: 700;
-            line-height: 17.76px;
-            letter-spacing: 1px;
-            text-align: center;
-            background-color: $btnColor;
-            transition: all 0.5s ease-in-out;
+            .check {
+              max-width: 313px;
+              height: 48px;
+              width: 100%;
+              border: none;
+              font-size: 13px;
+              font-weight: 700;
+              line-height: 17.76px;
+              letter-spacing: 1px;
+              text-align: center;
+              background-color: $btnColor;
+              transition: all 0.5s ease-in-out;
 
-            &:hover {
-              background-color: $btnHoverClr;
-              color: $main-bg-color;
+              &:hover {
+                background-color: $btnHoverClr;
+                color: $main-bg-color;
+              }
             }
           }
         }
