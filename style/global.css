@@ -2017,7 +2017,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-wrap: nowrap;
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox p {
@@ -2031,6 +2031,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox input {
   width: 309px;
   height: 58px;
+  border-radius: 8px;
   border: 1px solid #cfcfcf;
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox input::-moz-placeholder {
@@ -2051,7 +2052,293 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   opacity: 0.4;
   text-align: left;
 }
-
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox input {
+  width: 309px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox input {
+  width: 309px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container h3 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #d87d4a;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .addressBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .addressBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .addressBox input {
+  width: 634px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .addressBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .addressBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .zipCodeBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .zipCodeBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .zipCodeBox input {
+  width: 309px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .zipCodeBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .zipCodeBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .cityBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .cityBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .cityBox input {
+  width: 309px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .cityBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .rowBox_2 .cityBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.39px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox input {
+  width: 309px;
+  height: 58px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.12px;
+  letter-spacing: -0.25px;
+  color: #000000;
+  opacity: 0.4;
+  text-align: left;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_containersHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_containersHead h3 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #d87d4a;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_containersHead p {
+  padding-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card {
+  width: 338px;
+  height: 188px;
+  border-radius: 15px;
+  opacity: 0px;
+  background-color: #000000;
+}
 body footer .footer_container {
   padding: 72px 20px 48px 20px;
   max-width: 100%;

@@ -68,7 +68,7 @@ body {
                 .input_continer_1 {
                   @include flex_drct_jstf_algn_wrp(row, center, center);
                   .nameBox {
-                    @include flex_drct_jstf_algn_wrp(column, center, center);
+                    @include flex_drct_jstf_algn_wrp(column, center, start);
                     p {
                       font-size: 12px;
                       font-weight: 700;
@@ -80,6 +80,7 @@ body {
                     input {
                       width: 309px;
                       height: 58px;
+                      border-radius: 8px;
                       border: 1px solid $inputBorderClr;
 
                       &::placeholder {
@@ -92,6 +93,213 @@ body {
                         text-align: left;
                       }
                     }
+                  }
+                  .emailBox {
+                    @include flex_drct_jstf_algn_wrp(column, center, start);
+                    p {
+                      font-size: 12px;
+                      font-weight: 700;
+                      line-height: 16.39px;
+                      letter-spacing: -0.2px;
+                      text-align: left;
+                      color: $blackClr;
+                    }
+                    input {
+                      width: 309px;
+                      height: 58px;
+                      border-radius: 8px;
+                      border: 1px solid $inputBorderClr;
+
+                      &::placeholder {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 19.12px;
+                        letter-spacing: -0.25px;
+                        color: $blackClr;
+                        opacity: 0.4;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+                .phoneNumberBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    width: 309px;
+                    height: 58px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
+                    }
+                  }
+                }
+              }
+              .shipping_info_container {
+                h3 {
+                  font-size: 13px;
+                  font-weight: 700;
+                  line-height: 25px;
+                  letter-spacing: 0.9px;
+                  text-align: left;
+                  color: $btnColor;
+                }
+                .addressBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    width: 634px;
+                    height: 58px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
+                    }
+                  }
+                }
+                .rowBox_2 {
+                  @include flex_drct_jstf_algn_wrp(row, center, center);
+                  .zipCodeBox {
+                    @include flex_drct_jstf_algn_wrp(column, center, start);
+                    p {
+                      font-size: 12px;
+                      font-weight: 700;
+                      line-height: 16.39px;
+                      letter-spacing: -0.2px;
+                      text-align: left;
+                      color: $blackClr;
+                    }
+                    input {
+                      width: 309px;
+                      height: 58px;
+                      border-radius: 8px;
+                      border: 1px solid $inputBorderClr;
+
+                      &::placeholder {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 19.12px;
+                        letter-spacing: -0.25px;
+                        color: $blackClr;
+                        opacity: 0.4;
+                        text-align: left;
+                      }
+                    }
+                  }
+                  .cityBox {
+                    @include flex_drct_jstf_algn_wrp(column, center, start);
+                    p {
+                      font-size: 12px;
+                      font-weight: 700;
+                      line-height: 16.39px;
+                      letter-spacing: -0.2px;
+                      text-align: left;
+                      color: $blackClr;
+                    }
+                    input {
+                      width: 309px;
+                      height: 58px;
+                      border-radius: 8px;
+                      border: 1px solid $inputBorderClr;
+
+                      &::placeholder {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 19.12px;
+                        letter-spacing: -0.25px;
+                        color: $blackClr;
+                        opacity: 0.4;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+                .countryBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    width: 309px;
+                    height: 58px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
+                    }
+                  }
+                }
+              }
+              .payment_containersHead {
+                @include flex_drct_jstf_algn_wrp(row, space-between, center);
+                h3 {
+                  font-size: 13px;
+                  font-weight: 700;
+                  line-height: 25px;
+                  letter-spacing: 0.9px;
+                  text-align: left;
+                  color: $btnColor;
+                }
+                p {
+                  padding-bottom: 4px;
+                  font-size: 13px;
+                  font-weight: 500;
+                  line-height: 16px;
+                  letter-spacing: 0.03em;
+                  text-align: left;
+                  border-bottom: 1px solid $blackClr;
+                }
+              }
+              .payment_container {
+                @include flex_drct_jstf_algn_wrp(column, center, center);
+                .banck_card {
+                  width: 338px;
+                  height: 188px;
+                  border-radius: 15px;
+                  opacity: 0px;
+                  background-color: $blackClr;
+                  .card_head {
                   }
                 }
               }
