@@ -3,6 +3,7 @@ body {
   .card_Info {
     .card_info_container {
       max-width: 100%;
+      padding: 0px 20px;
 
       @include flex_drct_jstf_algn_wrp(column, center, center);
       .back_container {
@@ -31,375 +32,385 @@ body {
         }
       }
       .rowBox {
-        // @include flex_drct_jstf_algn_wrp(row, center, start);
+        @include flex_drct_jstf_algn_wrp(row, space-between, start);
         display: flex;
         max-width: 1110px;
         width: 100%;
         margin: 0 auto;
-        .valaidation_container {
-          display: flex;
-          max-width: 1110px;
+
+        .valaidation {
+          max-width: 730px;
           width: 100%;
+          height: 1340px;
+          padding: 77px 48px 64px 48px;
+          background-color: $checkoutBoxClr;
 
-          .valaidation {
-            max-width: 730px;
-            width: 100%;
-            height: 1340px;
-            padding: 77px 48px 64px 48px;
-            background-color: $checkoutBoxClr;
+          h2 {
+            margin-bottom: 41px;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 1.1px;
+            text-align: left;
+          }
 
-            h2 {
-              margin-bottom: 41px;
-              font-size: 32px;
-              font-weight: 700;
-              line-height: 36px;
-              letter-spacing: 1.1px;
-              text-align: left;
-            }
-
-            form {
-              .billing_details_container {
-                h3 {
-                  font-size: 13px;
-                  font-weight: 700;
-                  line-height: 25px;
-                  letter-spacing: 0.9px;
-                  text-align: left;
-                  color: $btnColor;
-                }
-                .input_continer_1 {
-                  max-width: 635px;
-                  width: 100%;
-                  margin-bottom: 24px;
-                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
-                  .nameBox {
-                    @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
-                      margin-bottom: 9px;
-                      font-size: 12px;
-                      font-weight: 700;
-                      line-height: 16.39px;
-                      letter-spacing: -0.2px;
-                      text-align: left;
-                      color: $blackClr;
-                    }
-                    input {
-                      width: 309px;
-                      height: 58px;
-                      padding-left: 25px;
-                      border-radius: 8px;
-                      border: 1px solid $inputBorderClr;
-
-                      &::placeholder {
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 19.12px;
-                        letter-spacing: -0.25px;
-                        color: $blackClr;
-                        opacity: 0.4;
-                        text-align: left;
-                      }
-                    }
-                  }
-                  .emailBox {
-                    @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
-                      margin-bottom: 9px;
-                      font-size: 12px;
-                      font-weight: 700;
-                      line-height: 16.39px;
-                      letter-spacing: -0.2px;
-                      text-align: left;
-                      color: $blackClr;
-                    }
-                    input {
-                      width: 309px;
-                      height: 58px;
-                      padding-left: 25px;
-                      border-radius: 8px;
-                      border: 1px solid $inputBorderClr;
-
-                      &::placeholder {
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 19.12px;
-                        letter-spacing: -0.25px;
-                        color: $blackClr;
-                        opacity: 0.4;
-                        text-align: left;
-                      }
-                    }
-                  }
-                }
-                .phoneNumberBox {
-                  margin-bottom: 61px;
-                  @include flex_drct_jstf_algn_wrp(column, center, start);
-                  p {
-                    margin-bottom: 9px;
-                    font-size: 12px;
-                    font-weight: 700;
-                    line-height: 16.39px;
-                    letter-spacing: -0.2px;
-                    text-align: left;
-                    color: $blackClr;
-                  }
-                  input {
-                    width: 309px;
-                    height: 58px;
-                    padding-left: 25px;
-                    border-radius: 8px;
-                    border: 1px solid $inputBorderClr;
-
-                    &::placeholder {
-                      font-size: 14px;
-                      font-weight: 700;
-                      line-height: 19.12px;
-                      letter-spacing: -0.25px;
-                      color: $blackClr;
-                      opacity: 0.4;
-                      text-align: left;
-                    }
-                  }
-                }
+          form {
+            .billing_details_container {
+              h3 {
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0.9px;
+                text-align: left;
+                color: $btnColor;
               }
-              .shipping_info_container {
-                h3 {
-                  margin-bottom: 11px;
-                  font-size: 13px;
-                  font-weight: 700;
-                  line-height: 25px;
-                  letter-spacing: 0.9px;
-                  text-align: left;
-                  color: $btnColor;
-                }
-                .addressBox {
-                  margin-bottom: 25px;
-                  @include flex_drct_jstf_algn_wrp(column, center, start);
-                  p {
-                    margin-bottom: 9px;
-                    font-size: 12px;
-                    font-weight: 700;
-                    line-height: 16.39px;
-                    letter-spacing: -0.2px;
-                    text-align: left;
-                    color: $blackClr;
-                  }
-                  input {
-                    width: 634px;
-                    height: 58px;
-                    padding-left: 25px;
-                    border-radius: 8px;
-                    border: 1px solid $inputBorderClr;
-
-                    &::placeholder {
-                      font-size: 14px;
-                      font-weight: 700;
-                      line-height: 19.12px;
-                      letter-spacing: -0.25px;
-                      color: $blackClr;
-                      opacity: 0.4;
-                      text-align: left;
-                    }
-                  }
-                }
-                .rowBox_2 {
-                  max-width: 635px;
-                  width: 100%;
-                  margin-bottom: 25px;
-                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
-                  .zipCodeBox {
-                    @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
-                      margin-bottom: 9px;
-                      font-size: 12px;
-                      font-weight: 700;
-                      line-height: 16.39px;
-                      letter-spacing: -0.2px;
-                      text-align: left;
-                      color: $blackClr;
-                    }
-                    input {
-                      width: 309px;
-                      height: 58px;
-                      padding-left: 25px;
-                      border-radius: 8px;
-                      border: 1px solid $inputBorderClr;
-
-                      &::placeholder {
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 19.12px;
-                        letter-spacing: -0.25px;
-                        color: $blackClr;
-                        opacity: 0.4;
-                        text-align: left;
-                      }
-                    }
-                  }
-                  .cityBox {
-                    @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
-                      margin-bottom: 9px;
-                      font-size: 12px;
-                      font-weight: 700;
-                      line-height: 16.39px;
-                      letter-spacing: -0.2px;
-                      text-align: left;
-                      color: $blackClr;
-                    }
-                    input {
-                      width: 309px;
-                      height: 58px;
-                      padding-left: 25px;
-                      border-radius: 8px;
-                      border: 1px solid $inputBorderClr;
-
-                      &::placeholder {
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 19.12px;
-                        letter-spacing: -0.25px;
-                        color: $blackClr;
-                        opacity: 0.4;
-                        text-align: left;
-                      }
-                    }
-                  }
-                }
-                .countryBox {
-                  margin-bottom: 41px;
-                  @include flex_drct_jstf_algn_wrp(column, center, start);
-                  p {
-                    margin-bottom: 9px;
-                    font-size: 12px;
-                    font-weight: 700;
-                    line-height: 16.39px;
-                    letter-spacing: -0.2px;
-                    text-align: left;
-                    color: $blackClr;
-                  }
-                  input {
-                    width: 309px;
-                    height: 58px;
-                    padding-left: 25px;
-                    border-radius: 8px;
-                    border: 1px solid $inputBorderClr;
-
-                    &::placeholder {
-                      font-size: 14px;
-                      font-weight: 700;
-                      line-height: 19.12px;
-                      letter-spacing: -0.25px;
-                      color: $blackClr;
-                      opacity: 0.4;
-                      text-align: left;
-                    }
-                  }
-                }
-              }
-              .payment_containersHead {
-                margin-bottom: 30px;
+              .input_continer_1 {
+                max-width: 635px;
+                width: 100%;
+                margin-bottom: 24px;
                 @include flex_drct_jstf_algn_wrp(row, space-between, center);
-                h3 {
-                  font-size: 13px;
-                  font-weight: 700;
-                  line-height: 25px;
-                  letter-spacing: 0.9px;
-                  text-align: left;
-                  color: $btnColor;
+                .nameBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    margin-bottom: 9px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    max-width: 309px;
+                    width: 100%;
+                    height: 58px;
+                    padding-left: 25px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
+                    }
+                  }
                 }
-                p {
-                  font-family: 'Inter';
-                  padding-bottom: 4px;
-                  font-size: 13px;
-                  font-weight: 500;
-                  line-height: 16px;
-                  letter-spacing: 0.03em;
-                  text-align: left;
-                  border-bottom: 1px solid $blackClr;
+                .emailBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    margin-bottom: 9px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    width: 309px;
+                    height: 58px;
+                    padding-left: 25px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
+                    }
+                  }
                 }
               }
-              .payment_container {
-                @include flex_drct_jstf_algn_wrp(column, center, center);
-                .banck_card {
-                  margin-bottom: 41px;
-                  width: 338px;
-                  height: 188px;
-                  padding: 23px 16px 18px 22px;
-                  border-radius: 15px;
-                  opacity: 0px;
-                  background-color: $blackClr;
-                  .linesBox {
-                    @include flex_drct_jstf_algn_wrp(row, center, center);
-                    position: relative;
-                    .backimg {
-                      width: 130px;
-                      height: 188px;
-                      background-image: url('../../essets/webp/check/line1.webp');
-                      background-repeat: no-repeat;
-                      position: absolute;
-                      top: -23px;
-                      left: 87px;
-                      z-index: 1;
-                    }
-                    .backimg2 {
-                      width: 130px;
-                      height: 188px;
-                      background-image: url('../../essets/webp/check/line2.webp');
-                      background-repeat: no-repeat;
-                      position: absolute;
-                      top: -23px;
-                      left: 128px;
-                      z-index: 1;
+              .phoneNumberBox {
+                margin-bottom: 61px;
+                @include flex_drct_jstf_algn_wrp(column, center, start);
+                p {
+                  margin-bottom: 9px;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 16.39px;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: $blackClr;
+                }
+                input {
+                  width: 309px;
+                  height: 58px;
+                  padding-left: 25px;
+                  border-radius: 8px;
+                  border: 1px solid $inputBorderClr;
+
+                  &::placeholder {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 19.12px;
+                    letter-spacing: -0.25px;
+                    color: $blackClr;
+                    opacity: 0.4;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+            .shipping_info_container {
+              h3 {
+                margin-bottom: 11px;
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0.9px;
+                text-align: left;
+                color: $btnColor;
+              }
+              .addressBox {
+                margin-bottom: 25px;
+                @include flex_drct_jstf_algn_wrp(column, center, start);
+                p {
+                  margin-bottom: 9px;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 16.39px;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: $blackClr;
+                }
+                input {
+                  width: 634px;
+                  height: 58px;
+                  padding-left: 25px;
+                  border-radius: 8px;
+                  border: 1px solid $inputBorderClr;
+
+                  &::placeholder {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 19.12px;
+                    letter-spacing: -0.25px;
+                    color: $blackClr;
+                    opacity: 0.4;
+                    text-align: left;
+                  }
+                }
+              }
+              .rowBox_2 {
+                max-width: 635px;
+                width: 100%;
+                margin-bottom: 25px;
+                @include flex_drct_jstf_algn_wrp(row, space-between, center);
+                .zipCodeBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    margin-bottom: 9px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
+                  }
+                  input {
+                    width: 309px;
+                    height: 58px;
+                    padding-left: 25px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
                     }
                   }
-                  .card_head {
-                    margin-bottom: 52px;
-                    @include flex_drct_jstf_algn_wrp(row, start, center);
+                }
+                .cityBox {
+                  @include flex_drct_jstf_algn_wrp(column, center, start);
+                  p {
+                    margin-bottom: 9px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16.39px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: $blackClr;
                   }
-                  .card_numbers {
-                    width: 240px;
-                    margin-bottom: 23px;
-                    z-index: 3;
-                    position: relative;
-                    @include flex_drct_jstf_algn_wrp(
-                      row,
-                      space-between,
-                      center
-                    );
-                    div {
-                      span {
-                        font-family: 'Inter';
-                        font-size: 17.25px;
-                        font-weight: 600;
-                        line-height: 24px;
-                        text-align: center;
-                        color: $main-bg-color;
-                      }
+                  input {
+                    width: 309px;
+                    height: 58px;
+                    padding-left: 25px;
+                    border-radius: 8px;
+                    border: 1px solid $inputBorderClr;
+
+                    &::placeholder {
+                      font-size: 14px;
+                      font-weight: 700;
+                      line-height: 19.12px;
+                      letter-spacing: -0.25px;
+                      color: $blackClr;
+                      opacity: 0.4;
+                      text-align: left;
                     }
                   }
-                  .holder {
-                    @include flex_drct_jstf_algn_wrp(
-                      row,
-                      space-between,
-                      center
-                    );
+                }
+              }
+              .countryBox {
+                margin-bottom: 41px;
+                @include flex_drct_jstf_algn_wrp(column, center, start);
+                p {
+                  margin-bottom: 9px;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 16.39px;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: $blackClr;
+                }
+                input {
+                  width: 309px;
+                  height: 58px;
+                  padding-left: 25px;
+                  border-radius: 8px;
+                  border: 1px solid $inputBorderClr;
+
+                  &::placeholder {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 19.12px;
+                    letter-spacing: -0.25px;
+                    color: $blackClr;
+                    opacity: 0.4;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+            .payment_containersHead {
+              margin-bottom: 30px;
+              @include flex_drct_jstf_algn_wrp(row, space-between, center);
+              h3 {
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0.9px;
+                text-align: left;
+                color: $btnColor;
+              }
+              p {
+                font-family: 'Inter';
+                padding-bottom: 4px;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 0.03em;
+                text-align: left;
+                border-bottom: 1px solid $blackClr;
+              }
+            }
+            .payment_container {
+              @include flex_drct_jstf_algn_wrp(column, center, center);
+              .banck_card {
+                margin-bottom: 41px;
+                width: 338px;
+                height: 188px;
+                padding: 23px 16px 18px 22px;
+                border-radius: 15px;
+                opacity: 0px;
+                background-color: $blackClr;
+                .linesBox {
+                  @include flex_drct_jstf_algn_wrp(row, center, center);
+                  position: relative;
+                  .backimg {
+                    width: 130px;
+                    height: 188px;
+                    background-image: url('../../essets/webp/check/line1.webp');
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: -23px;
+                    left: 87px;
+                    z-index: 1;
+                  }
+                  .backimg2 {
+                    width: 130px;
+                    height: 188px;
+                    background-image: url('../../essets/webp/check/line2.webp');
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: -23px;
+                    left: 128px;
+                    z-index: 1;
+                  }
+                }
+                .card_head {
+                  margin-bottom: 52px;
+                  @include flex_drct_jstf_algn_wrp(row, start, center);
+                }
+                .card_numbers {
+                  width: 240px;
+                  margin-bottom: 23px;
+                  z-index: 3;
+                  position: relative;
+                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
+                  div {
                     span {
                       font-family: 'Inter';
-                      font-size: 14px;
-                      font-weight: 500;
-                      line-height: 16px;
-                      text-align: left;
-                      color: $holderClor;
+                      font-size: 17.25px;
+                      font-weight: 600;
+                      line-height: 24px;
+                      text-align: center;
+                      color: $main-bg-color;
                     }
                   }
                 }
-                .payment_input_container {
+                .holder {
+                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
+                  span {
+                    font-family: 'Inter';
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    text-align: left;
+                    color: $holderClor;
+                  }
+                }
+              }
+              .payment_input_container {
+                input {
+                  width: 634px;
+                  height: 58px;
+                  padding-left: 25px;
+                  margin-bottom: 16px;
+                  border-radius: 8px;
+                  border: 1px solid $inputBorderClr;
+
+                  &::placeholder {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 19.12px;
+                    letter-spacing: -0.25px;
+                    color: $blackClr;
+                    opacity: 0.4;
+                    text-align: left;
+                  }
+                }
+                .rowBox_3 {
+                  max-width: 635px;
+                  width: 100%;
+                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
                   input {
-                    width: 634px;
+                    width: 309px;
                     height: 58px;
                     padding-left: 25px;
-                    margin-bottom: 16px;
                     border-radius: 8px;
                     border: 1px solid $inputBorderClr;
 
@@ -413,95 +424,284 @@ body {
                       text-align: left;
                     }
                   }
-                  .rowBox_3 {
-                    max-width: 635px;
-                    width: 100%;
-                    @include flex_drct_jstf_algn_wrp(
-                      row,
-                      space-between,
-                      center
-                    );
-                    input {
-                      width: 309px;
-                      height: 58px;
-                      padding-left: 25px;
-                      border-radius: 8px;
-                      border: 1px solid $inputBorderClr;
-
-                      &::placeholder {
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 19.12px;
-                        letter-spacing: -0.25px;
-                        color: $blackClr;
-                        opacity: 0.4;
-                        text-align: left;
-                      }
-                    }
-                  }
                 }
               }
             }
           }
         }
+        .cart_info {
+          flex: 1;
+          height: fit-content;
+          padding: 32px;
+          max-width: 350px;
+          width: 100%;
+          background-color: $checkoutBoxClr;
+
+          .popupHead {
+            margin-bottom: 31px;
+            P {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              letter-spacing: 1.2px;
+              text-align: left;
+            }
+          }
+
+          .productBox_Container {
+            // width: 100%;
+            @include flex_drct_jstf_algn_wrp(column, space-between, center);
+
+            .product_Box {
+              max-width: 350px;
+              width: 100%;
+              margin-bottom: 32px;
+              @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+              .imgbox {
+                width: 64px;
+                height: 64px;
+                border-radius: 8px;
+                padding: 12px;
+                margin-right: 17px;
+                background-color: $shopBoxClr;
+                @include flex_drct_jstf_algn_wrp(column, center, center);
+
+                img {
+                  width: 36px;
+                  height: 40px;
+                }
+              }
+
+              .text_container {
+                width: 100%;
+                @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+                .Name_price_container {
+                  h2 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 25px;
+                    text-align: left;
+                  }
+
+                  .price {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 25px;
+                    text-align: left;
+                    opacity: 0.5;
+                  }
+                }
+              }
+              .quantity_remove_container {
+                .quantity {
+                  font-size: 15px;
+                  font-weight: 700;
+                  line-height: 25px;
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+          .total_price {
+            margin-bottom: 8px;
+            @include flex_drct_jstf_algn_wrp(row, space-between, center);
+            p {
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+            }
+            span {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              color: $blackClr;
+            }
+          }
+          .shipping_percentage {
+            margin-bottom: 57px;
+            @include flex_drct_jstf_algn_wrp(row, space-between, center);
+            p {
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+            }
+            span {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              color: $blackClr;
+            }
+          }
+          .Grand_Total {
+            margin-bottom: 32px;
+            @include flex_drct_jstf_algn_wrp(row, space-between, center);
+            p {
+              opacity: 0.5;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 25px;
+            }
+            span {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.59px;
+              color: $btnColor;
+            }
+          }
+          .payBtn {
+            width: 284px;
+            height: 48px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 17.76px;
+            letter-spacing: 1px;
+            text-align: center;
+            border: none;
+            color: $main-bg-color;
+            background-color: $btnColor;
+          }
+        }
       }
     }
   }
 }
-.cart_info {
-  height: 612px;
-  padding: 32px;
-  max-width: 350px;
-  width: 100%;
+// .cart_info {
+//   flex: 1;
+//   height: fit-content;
+//   padding: 32px;
+//   max-width: 350px;
+//   width: 100%;
+//   background-color: $checkoutBoxClr;
 
-  background-color: $checkoutBoxClr;
+//   .popupHead {
+//     margin-bottom: 31px;
+//     P {
+//       font-size: 18px;
+//       font-weight: 700;
+//       line-height: 24.59px;
+//       letter-spacing: 1.2px;
+//       text-align: left;
+//     }
+//   }
 
-  .productBox_Container {
-    // width: 100%;
-    @include flex_drct_jstf_algn_wrp(column, space-between, center);
+//   .productBox_Container {
+//     // width: 100%;
+//     @include flex_drct_jstf_algn_wrp(column, space-between, center);
 
-    .product_Box {
-      max-width: 350px;
-      width: 100%;
-      margin-bottom: 24px;
-      @include flex_drct_jstf_algn_wrp(row, space-between, center);
+//     .product_Box {
+//       max-width: 350px;
+//       width: 100%;
+//       margin-bottom: 32px;
+//       @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
-      .imgbox {
-        width: 64px;
-        height: 64px;
-        border-radius: 8px;
-        padding: 12px;
-        margin-right: 17px;
-        background-color: $shopBoxClr;
-        @include flex_drct_jstf_algn_wrp(column, center, center);
+//       .imgbox {
+//         width: 64px;
+//         height: 64px;
+//         border-radius: 8px;
+//         padding: 12px;
+//         margin-right: 17px;
+//         background-color: $shopBoxClr;
+//         @include flex_drct_jstf_algn_wrp(column, center, center);
 
-        img {
-          width: 36px;
-          height: 40px;
-        }
-      }
+//         img {
+//           width: 36px;
+//           height: 40px;
+//         }
+//       }
 
-      .text_container {
-        width: 100%;
-        @include flex_drct_jstf_algn_wrp(row, space-between, center);
+//       .text_container {
+//         width: 100%;
+//         @include flex_drct_jstf_algn_wrp(row, space-between, center);
 
-        .Name_price_container {
-          h2 {
-            font-size: 15px;
-            font-weight: 700;
-            line-height: 25px;
-            text-align: left;
-          }
+//         .Name_price_container {
+//           h2 {
+//             font-size: 15px;
+//             font-weight: 700;
+//             line-height: 25px;
+//             text-align: left;
+//           }
 
-          .price {
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 25px;
-            text-align: left;
-            opacity: 0.5;
-          }
-        }
-      }
-    }
-  }
-}
+//           .price {
+//             font-size: 14px;
+//             font-weight: 700;
+//             line-height: 25px;
+//             text-align: left;
+//             opacity: 0.5;
+//           }
+//         }
+//       }
+//       .quantity_remove_container {
+//         .quantity {
+//           font-size: 15px;
+//           font-weight: 700;
+//           line-height: 25px;
+//           opacity: 0.5;
+//         }
+//       }
+//     }
+//   }
+//   .total_price {
+//     margin-bottom: 8px;
+//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
+//     p {
+//       opacity: 0.5;
+//       font-size: 15px;
+//       font-weight: 400;
+//       line-height: 25px;
+//     }
+//     span {
+//       font-size: 18px;
+//       font-weight: 700;
+//       line-height: 24.59px;
+//       color: $blackClr;
+//     }
+//   }
+//   .shipping_percentage {
+//     margin-bottom: 57px;
+//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
+//     p {
+//       opacity: 0.5;
+//       font-size: 15px;
+//       font-weight: 400;
+//       line-height: 25px;
+//     }
+//     span {
+//       font-size: 18px;
+//       font-weight: 700;
+//       line-height: 24.59px;
+//       color: $blackClr;
+//     }
+//   }
+//   .Grand_Total {
+//     margin-bottom: 32px;
+//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
+//     p {
+//       opacity: 0.5;
+//       font-size: 15px;
+//       font-weight: 400;
+//       line-height: 25px;
+//     }
+//     span {
+//       font-size: 18px;
+//       font-weight: 700;
+//       line-height: 24.59px;
+//       color: $btnColor;
+//     }
+//   }
+//   .payBtn {
+//     width: 284px;
+//     height: 48px;
+//     font-size: 13px;
+//     font-weight: 700;
+//     line-height: 17.76px;
+//     letter-spacing: 1px;
+//     text-align: center;
+//     border: none;
+//     color: $main-bg-color;
+//     background-color: $btnColor;
+//   }
+// }

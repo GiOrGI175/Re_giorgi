@@ -1,8 +1,21 @@
+function calculateTotalPrice(cart) {
+  return cart.reduce((sum, p) => sum + Number(p.price) * Number(p.quantity), 0);
+}
+
+function percentage(total) {
+  let percentage = Math.floor((2 / 100) * total);
+
+  return total + percentage;
+}
+
 function updateCartInfo() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   let total = calculateTotalPrice(cart);
 
-  let items = calculateTotalQuantity(cart);
+  let totaPercentage = percentage(total);
+
+  console.log(totaPercentage);
 
   const popup = document.querySelector('.cart_info');
 
@@ -12,6 +25,15 @@ function updateCartInfo() {
 
   const productBoxContainer = document.createElement('div');
   productBoxContainer.className = 'productBox_Container';
+
+  const popuphead = document.createElement('div');
+  popuphead.className = 'popupHead';
+
+  const popupheadtxt = document.createElement('p');
+  popupheadtxt.textContent = 'SUMMARY';
+
+  popuphead.appendChild(popupheadtxt);
+  popup.appendChild(popuphead);
 
   cart.forEach((product, index) => {
     console.log(product);
@@ -47,7 +69,7 @@ function updateCartInfo() {
     textContainer.appendChild(NamePriceBox);
 
     const quantity = document.createElement('span');
-    quantity.textContent = product.quantity;
+    quantity.textContent = `x${product.quantity}`;
     quantity.className = 'quantity';
     quantityREmoveBox.appendChild(quantity);
 
@@ -59,55 +81,49 @@ function updateCartInfo() {
     popup.appendChild(productBoxContainer);
   });
 
-  //   const popupHead = document.createElement('div');
-  //   popupHead.className = 'popupHead';
+  const totalBox = document.createElement('div');
+  totalBox.className = 'total_price';
 
-  //   const totalElemnts = document.createElement('div');
-  //   totalElemnts.textContent = `CART (${items})`;
-  //   popupHead.appendChild(totalElemnts);
+  const Totaltxt = document.createElement('p');
+  Totaltxt.textContent = 'TOTAL';
 
-  //   const removeAllElemnt = document.createElement('button');
-  //   removeAllElemnt.textContent = 'Remove all';
+  const Total = document.createElement('span');
+  Total.textContent = `$ ${total}`;
 
-  //   popupHead.appendChild(removeAllElemnt);
+  totalBox.appendChild(Totaltxt);
+  totalBox.appendChild(Total);
+  popup.appendChild(totalBox);
 
-  //   popup.appendChild(popupHead);
+  const shippingBox = document.createElement('div');
+  shippingBox.className = 'shipping_percentage';
 
-  //   const totalpPrice = document.createElement('div');
-  //   totalpPrice.className = 'price_container';
+  const shoppingltxt = document.createElement('p');
+  shoppingltxt.textContent = 'SHIPPING';
 
-  //   const priceBox = document.createElement('p');
-  //   priceBox.textContent = 'TOTAL';
-  //   totalpPrice.appendChild(priceBox);
+  const shipping = document.createElement('span');
+  shipping.textContent = `$ ${Math.floor((2 / 100) * total)}`;
 
-  //   const totalpriceBox = document.createElement('span');
-  //   totalpriceBox.textContent = `$${total}`;
-  //   totalpPrice.appendChild(totalpriceBox);
+  shippingBox.appendChild(shoppingltxt);
+  shippingBox.appendChild(shipping);
+  popup.appendChild(shippingBox);
 
-  //   popup.appendChild(totalpPrice);
+  const GrandtotalBox = document.createElement('div');
+  GrandtotalBox.className = 'Grand_Total';
 
-  //   const link = document.createElement('a');
-  //   link.href = 'checkout.html';
+  const Grandtotaltxt = document.createElement('p');
+  Grandtotaltxt.textContent = 'GRAND TOTAL';
 
-  //   const checkBtn = document.createElement('button');
-  //   checkBtn.textContent = 'CHECKOUT';
-  //   checkBtn.className = 'check';
+  const Grandtotal = document.createElement('span');
+  Grandtotal.textContent = `$ ${totaPercentage}`;
 
-  //   link.appendChild(checkBtn);
-  //   popup.appendChild(link);
+  GrandtotalBox.appendChild(Grandtotaltxt);
+  GrandtotalBox.appendChild(Grandtotal);
+  popup.appendChild(GrandtotalBox);
 
-  //   removeAllElemnt.addEventListener('click', function removeremoveAllElemnts() {
-  //     localStorage.removeItem('cart');
+  const payBtn = document.createElement('button');
+  payBtn.textContent = 'CONTINUE & PAY';
+  payBtn.className = 'payBtn';
 
-  //     cart = [];
-
-  //     if ((cart = [])) {
-  //       productBoxContainer.textContent = '';
-
-  //       totalpriceBox.textContent = `$${(total = 0)}`;
-
-  //       totalElemnts.textContent = `CART (${(items = 0)})`;
-  //     }
-  //   });
+  popup.appendChild(payBtn);
 }
 updateCartInfo();
