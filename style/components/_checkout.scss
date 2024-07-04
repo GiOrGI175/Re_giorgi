@@ -1,9 +1,12 @@
 body {
   background-color: $backGroundClrInCHeck;
+
+  @media (max-width: $l-tablet) {
+    background-color: $main-bg-color;
+  }
   .card_Info {
     .card_info_container {
       max-width: 100%;
-      padding: 0px 20px;
 
       @include flex_drct_jstf_algn_wrp(column, center, center);
       .back_container {
@@ -13,10 +16,10 @@ body {
         margin: 80px 0px 55px 0px;
 
         @media (max-width: $l-tablet) {
-          max-width: 689px;
+          padding-left: 40px;
         }
         @media (max-width: $phone) {
-          max-width: 327px;
+          padding-left: 20px;
         }
         a {
           font-size: 15px;
@@ -37,14 +40,34 @@ body {
         width: 100%;
         margin: 0 auto;
 
+        @media (max-width: $l-tablet) {
+          @include flex_drct_jstf_algn_wrp(column, center, center);
+        }
+
         .valaidation_container {
           flex: 0.7;
+
+          @media (max-width: $l-tablet) {
+            @include flex_drct_jstf_algn_wrp(row, center, center);
+            flex: 0;
+            width: 100%;
+          }
           .valaidation {
             max-width: 730px;
             width: 100%;
             height: 1340px;
             padding: 77px 48px 64px 48px;
             background-color: $checkoutBoxClr;
+
+            @media (max-width: $l-tablet) {
+              max-width: 689px;
+              height: 1133px;
+              padding: 0px 40px;
+            }
+
+            @media (max-width: $phone) {
+              height: fit-content;
+            }
 
             h2 {
               margin-bottom: 41px;
@@ -58,6 +81,10 @@ body {
             form {
               .billing_details_container {
                 @include flex_drct_jstf_algn_wrp(column, none, none);
+
+                @media (max-width: $phone) {
+                  height: 350px;
+                }
                 h3 {
                   font-size: 13px;
                   font-weight: 700;
@@ -70,9 +97,21 @@ body {
                   width: 100%;
                   margin-bottom: 24px;
                   @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+                  @media (max-width: $phone) {
+                    @include flex_drct_jstf_algn_wrp(
+                      column,
+                      space-between,
+                      center
+                    );
+                  }
                   .nameBox {
                     @include flex_drct_jstf_algn_wrp(column, center, start);
                     width: 49.5%;
+                    @media (max-width: $phone) {
+                      width: 100%;
+                      margin-bottom: 24px;
+                    }
 
                     label {
                       margin-bottom: 9px;
@@ -105,6 +144,10 @@ body {
                   .emailBox {
                     width: 49.5%;
                     @include flex_drct_jstf_algn_wrp(column, center, start);
+
+                    @media (max-width: $phone) {
+                      width: 100%;
+                    }
                     label {
                       margin-bottom: 9px;
                       font-size: 12px;
@@ -151,6 +194,9 @@ body {
                     padding-left: 25px;
                     border-radius: 8px;
                     border: 1px solid $inputBorderClr;
+                    @media (max-width: $phone) {
+                      width: 100%;
+                    }
 
                     &::placeholder {
                       font-size: 14px;
@@ -209,12 +255,21 @@ body {
                 .input_continer_2 {
                   width: 100%;
                   margin-bottom: 25px;
-
                   @include flex_drct_jstf_algn_wrp(row, space-between, center);
+
+                  @media (max-width: $phone) {
+                    @include flex_drct_jstf_algn_wrp(column, center, center);
+                  }
+
                   .zipCodeBox {
                     width: 49.5%;
                     @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
+
+                    @media (max-width: $phone) {
+                      width: 100%;
+                      margin-bottom: 24px;
+                    }
+                    label {
                       margin-bottom: 9px;
                       font-size: 12px;
                       font-weight: 700;
@@ -244,7 +299,11 @@ body {
                   .cityBox {
                     width: 49.5%;
                     @include flex_drct_jstf_algn_wrp(column, center, start);
-                    p {
+                    @media (max-width: $phone) {
+                      width: 100%;
+                    }
+
+                    label {
                       margin-bottom: 9px;
                       font-size: 12px;
                       font-weight: 700;
@@ -253,6 +312,7 @@ body {
                       text-align: left;
                       color: $blackClr;
                     }
+
                     input {
                       width: 100%;
                       height: 58px;
@@ -276,7 +336,7 @@ body {
                   margin-bottom: 41px;
                   width: 100%;
                   @include flex_drct_jstf_algn_wrp(column, center, start);
-                  p {
+                  label {
                     margin-bottom: 9px;
                     font-size: 12px;
                     font-weight: 700;
@@ -291,6 +351,10 @@ body {
                     padding-left: 25px;
                     border-radius: 8px;
                     border: 1px solid $inputBorderClr;
+
+                    @media (max-width: $phone) {
+                      width: 100%;
+                    }
 
                     &::placeholder {
                       font-size: 14px;
@@ -330,6 +394,15 @@ body {
               .payment_container {
                 width: 100%;
                 @include flex_drct_jstf_algn_wrp(column, center, center);
+
+                @media (max-width: $l-tablet) {
+                  @include flex_drct_jstf_algn_wrp(row, center, start);
+                }
+                @media (max-width: $phone) {
+                  @include flex_drct_jstf_algn_wrp(column, center, center);
+                  margin-bottom: 60px;
+                }
+
                 .banck_card {
                   margin-bottom: 41px;
                   width: 338px;
@@ -338,6 +411,16 @@ body {
                   border-radius: 15px;
                   opacity: 0px;
                   background-color: $blackClr;
+
+                  @media (max-width: $l-tablet) {
+                    order: 2;
+                    margin-bottom: 0px;
+                    margin-left: 25px;
+                    @media (max-width: $phone) {
+                      margin-left: 0px;
+                      margin-top: 32px;
+                    }
+                  }
                   .linesBox {
                     @include flex_drct_jstf_algn_wrp(row, center, center);
                     position: relative;
@@ -403,39 +486,15 @@ body {
                     }
                   }
                 }
-              }
-              .payment_input_container {
-                width: 100%;
-                .Cardholder {
+                .payment_input_container {
                   width: 100%;
-                  input {
+                  .Cardholder {
                     width: 100%;
-                    height: 58px;
-                    padding-left: 25px;
-                    margin-bottom: 16px;
-                    border-radius: 8px;
-                    border: 1px solid $inputBorderClr;
-
-                    &::placeholder {
-                      font-size: 14px;
-                      font-weight: 700;
-                      line-height: 19.12px;
-                      letter-spacing: -0.25px;
-                      color: $blackClr;
-                      opacity: 0.4;
-                      text-align: left;
-                    }
-                  }
-                }
-                .rowBox_3 {
-                  width: 100%;
-                  @include flex_drct_jstf_algn_wrp(row, space-between, center);
-                  div {
-                    width: 49.5%;
                     input {
                       width: 100%;
                       height: 58px;
                       padding-left: 25px;
+                      margin-bottom: 16px;
                       border-radius: 8px;
                       border: 1px solid $inputBorderClr;
 
@@ -450,6 +509,34 @@ body {
                       }
                     }
                   }
+                  .rowBox_3 {
+                    width: 100%;
+                    @include flex_drct_jstf_algn_wrp(
+                      row,
+                      space-between,
+                      center
+                    );
+                    div {
+                      width: 49.5%;
+                      input {
+                        width: 100%;
+                        height: 58px;
+                        padding-left: 25px;
+                        border-radius: 8px;
+                        border: 1px solid $inputBorderClr;
+
+                        &::placeholder {
+                          font-size: 14px;
+                          font-weight: 700;
+                          line-height: 19.12px;
+                          letter-spacing: -0.25px;
+                          color: $blackClr;
+                          opacity: 0.4;
+                          text-align: left;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -457,12 +544,24 @@ body {
         }
         .cart_container {
           flex: 0.3;
+          @media (max-width: $l-tablet) {
+            @include flex_drct_jstf_algn_wrp(row, center, center);
+            flex: 0;
+            width: 100%;
+          }
+
           .cart_info {
             padding: 32px;
             max-width: 350px;
             min-width: 270px;
             width: 100%;
             background-color: $checkoutBoxClr;
+
+            @media (max-width: $l-tablet) {
+              max-width: 689px;
+              height: fit-content;
+              padding: 0px 33px;
+            }
 
             .popupHead {
               width: 100%;
@@ -594,6 +693,10 @@ body {
               border: none;
               color: $main-bg-color;
               background-color: $btnColor;
+
+              @media (max-width: $l-tablet) {
+                max-width: 100%;
+              }
             }
           }
         }
@@ -601,139 +704,3 @@ body {
     }
   }
 }
-// .cart_info {
-//   flex: 1;
-//   height: fit-content;
-//   padding: 32px;
-//   max-width: 350px;
-//   width: 100%;
-//   background-color: $checkoutBoxClr;
-
-//   .popupHead {
-//     margin-bottom: 31px;
-//     P {
-//       font-size: 18px;
-//       font-weight: 700;
-//       line-height: 24.59px;
-//       letter-spacing: 1.2px;
-//       text-align: left;
-//     }
-//   }
-
-//   .productBox_Container {
-//     // width: 100%;
-//     @include flex_drct_jstf_algn_wrp(column, space-between, center);
-
-//     .product_Box {
-//       max-width: 350px;
-//       width: 100%;
-//       margin-bottom: 32px;
-//       @include flex_drct_jstf_algn_wrp(row, space-between, center);
-
-//       .imgbox {
-//         width: 64px;
-//         height: 64px;
-//         border-radius: 8px;
-//         padding: 12px;
-//         margin-right: 17px;
-//         background-color: $shopBoxClr;
-//         @include flex_drct_jstf_algn_wrp(column, center, center);
-
-//         img {
-//           width: 36px;
-//           height: 40px;
-//         }
-//       }
-
-//       .text_container {
-//         width: 100%;
-//         @include flex_drct_jstf_algn_wrp(row, space-between, center);
-
-//         .Name_price_container {
-//           h2 {
-//             font-size: 15px;
-//             font-weight: 700;
-//             line-height: 25px;
-//             text-align: left;
-//           }
-
-//           .price {
-//             font-size: 14px;
-//             font-weight: 700;
-//             line-height: 25px;
-//             text-align: left;
-//             opacity: 0.5;
-//           }
-//         }
-//       }
-//       .quantity_remove_container {
-//         .quantity {
-//           font-size: 15px;
-//           font-weight: 700;
-//           line-height: 25px;
-//           opacity: 0.5;
-//         }
-//       }
-//     }
-//   }
-//   .total_price {
-//     margin-bottom: 8px;
-//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
-//     p {
-//       opacity: 0.5;
-//       font-size: 15px;
-//       font-weight: 400;
-//       line-height: 25px;
-//     }
-//     span {
-//       font-size: 18px;
-//       font-weight: 700;
-//       line-height: 24.59px;
-//       color: $blackClr;
-//     }
-//   }
-//   .shipping_percentage {
-//     margin-bottom: 57px;
-//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
-//     p {
-//       opacity: 0.5;
-//       font-size: 15px;
-//       font-weight: 400;
-//       line-height: 25px;
-//     }
-//     span {
-//       font-size: 18px;
-//       font-weight: 700;
-//       line-height: 24.59px;
-//       color: $blackClr;
-//     }
-//   }
-//   .Grand_Total {
-//     margin-bottom: 32px;
-//     @include flex_drct_jstf_algn_wrp(row, space-between, center);
-//     p {
-//       opacity: 0.5;
-//       font-size: 15px;
-//       font-weight: 400;
-//       line-height: 25px;
-//     }
-//     span {
-//       font-size: 18px;
-//       font-weight: 700;
-//       line-height: 24.59px;
-//       color: $btnColor;
-//     }
-//   }
-//   .payBtn {
-//     width: 284px;
-//     height: 48px;
-//     font-size: 13px;
-//     font-weight: 700;
-//     line-height: 17.76px;
-//     letter-spacing: 1px;
-//     text-align: center;
-//     border: none;
-//     color: $main-bg-color;
-//     background-color: $btnColor;
-//   }
-// }

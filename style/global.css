@@ -1950,9 +1950,13 @@ body .overlay.active {
 body {
   background-color: #f1f1f1;
 }
+@media (max-width: 850px) {
+  body {
+    background-color: #fff;
+  }
+}
 body .card_Info .card_info_container {
   max-width: 100%;
-  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1967,12 +1971,12 @@ body .card_Info .card_info_container .back_container {
 }
 @media (max-width: 850px) {
   body .card_Info .card_info_container .back_container {
-    max-width: 689px;
+    padding-left: 40px;
   }
 }
 @media (max-width: 720px) {
   body .card_Info .card_info_container .back_container {
-    max-width: 327px;
+    padding-left: 20px;
   }
 }
 body .card_Info .card_info_container .back_container a {
@@ -1996,8 +2000,28 @@ body .card_Info .card_info_container .rowBox {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 body .card_Info .card_info_container .rowBox .valaidation_container {
   flex: 0.7;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex: 0;
+    width: 100%;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation {
   max-width: 730px;
@@ -2005,6 +2029,19 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   height: 1340px;
   padding: 77px 48px 64px 48px;
   background-color: #ffffff;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation {
+    max-width: 689px;
+    height: 1133px;
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation h2 {
   margin-bottom: 41px;
@@ -2020,6 +2057,11 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   justify-content: none;
   align-items: none;
   flex-wrap: nowrap;
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container {
+    height: 350px;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container h3 {
   font-size: 13px;
@@ -2038,6 +2080,15 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox {
   display: flex;
   flex-direction: column;
@@ -2045,6 +2096,12 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: start;
   flex-wrap: nowrap;
   width: 49.5%;
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox {
+    width: 100%;
+    margin-bottom: 24px;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .nameBox label {
   margin-bottom: 9px;
@@ -2087,6 +2144,11 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   justify-content: center;
   align-items: start;
   flex-wrap: nowrap;
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox {
+    width: 100%;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .input_continer_1 .emailBox label {
   margin-bottom: 9px;
@@ -2145,6 +2207,11 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   padding-left: 25px;
   border-radius: 8px;
   border: 1px solid #cfcfcf;
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox input {
+    width: 100%;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .billing_details_container .phoneNumberBox input::-moz-placeholder {
   font-size: 14px;
@@ -2228,6 +2295,15 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .zipCodeBox {
   width: 49.5%;
   display: flex;
@@ -2236,7 +2312,13 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: start;
   flex-wrap: nowrap;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .zipCodeBox p {
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .zipCodeBox {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .zipCodeBox label {
   margin-bottom: 9px;
   font-size: 12px;
   font-weight: 700;
@@ -2278,7 +2360,12 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: start;
   flex-wrap: nowrap;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .cityBox p {
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .cityBox {
+    width: 100%;
+  }
+}
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .input_continer_2 .cityBox label {
   margin-bottom: 9px;
   font-size: 12px;
   font-weight: 700;
@@ -2321,7 +2408,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: start;
   flex-wrap: nowrap;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox p {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox label {
   margin-bottom: 9px;
   font-size: 12px;
   font-weight: 700;
@@ -2336,6 +2423,11 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   padding-left: 25px;
   border-radius: 8px;
   border: 1px solid #cfcfcf;
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox input {
+    width: 100%;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .shipping_info_container .countryBox input::-moz-placeholder {
   font-size: 14px;
@@ -2390,6 +2482,25 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+  }
+}
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card {
   margin-bottom: 41px;
   width: 338px;
@@ -2398,6 +2509,19 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   border-radius: 15px;
   opacity: 0px;
   background-color: #000000;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card {
+    order: 2;
+    margin-bottom: 0px;
+    margin-left: 25px;
+  }
+}
+@media (max-width: 850px) and (max-width: 720px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card {
+    margin-left: 0px;
+    margin-top: 32px;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .linesBox {
   display: flex;
@@ -2469,13 +2593,13 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   text-align: left;
   color: #aeaeae;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container {
   width: 100%;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .Cardholder {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .Cardholder {
   width: 100%;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .Cardholder input {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .Cardholder input {
   width: 100%;
   height: 58px;
   padding-left: 25px;
@@ -2483,7 +2607,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   border-radius: 8px;
   border: 1px solid #cfcfcf;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .Cardholder input::-moz-placeholder {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .Cardholder input::-moz-placeholder {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.12px;
@@ -2492,7 +2616,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   opacity: 0.4;
   text-align: left;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .Cardholder input::placeholder {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .Cardholder input::placeholder {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.12px;
@@ -2501,7 +2625,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   opacity: 0.4;
   text-align: left;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .rowBox_3 {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .rowBox_3 {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -2509,17 +2633,17 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   align-items: center;
   flex-wrap: nowrap;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .rowBox_3 div {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .rowBox_3 div {
   width: 49.5%;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .rowBox_3 div input {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .rowBox_3 div input {
   width: 100%;
   height: 58px;
   padding-left: 25px;
   border-radius: 8px;
   border: 1px solid #cfcfcf;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .rowBox_3 div input::-moz-placeholder {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .rowBox_3 div input::-moz-placeholder {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.12px;
@@ -2528,7 +2652,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   opacity: 0.4;
   text-align: left;
 }
-body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_input_container .rowBox_3 div input::placeholder {
+body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .payment_input_container .rowBox_3 div input::placeholder {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.12px;
@@ -2540,12 +2664,31 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
 body .card_Info .card_info_container .rowBox .cart_container {
   flex: 0.3;
 }
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .cart_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex: 0;
+    width: 100%;
+  }
+}
 body .card_Info .card_info_container .rowBox .cart_container .cart_info {
   padding: 32px;
   max-width: 350px;
   min-width: 270px;
   width: 100%;
   background-color: #ffffff;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .cart_container .cart_info {
+    max-width: 689px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0px 33px;
+  }
 }
 body .card_Info .card_info_container .rowBox .cart_container .cart_info .popupHead {
   width: 100%;
@@ -2693,6 +2836,11 @@ body .card_Info .card_info_container .rowBox .cart_container .cart_info .payBtn 
   border: none;
   color: #fff;
   background-color: #d87d4a;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .cart_container .cart_info .payBtn {
+    max-width: 100%;
+  }
 }
 
 body footer .footer_container {
