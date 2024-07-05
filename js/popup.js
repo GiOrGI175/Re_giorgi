@@ -1,3 +1,12 @@
+const btn = document.querySelector('.menu_btn');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  document.querySelector('.menu').classList.toggle('show_menu');
+  document.querySelector('.overlay').classList.toggle('active');
+  document.body.classList.toggle('no_scroll');
+});
+
 let shoppingCartIcon = document.querySelector('.cart');
 
 shoppingCartIcon.addEventListener('click', () => {

@@ -1,11 +1,11 @@
 //! header [<
 
 ////! side menu btn [<
-const btn = document.querySelector('.menu_btn');
+// const btn = document.querySelector('.menu_btn');
 
-btn.addEventListener('click', () => {
-  btn.classList.toggle('open');
-});
+// btn.addEventListener('click', () => {
+//   btn.classList.toggle('open');
+// });
 ////! side menu btn >]
 
 //! header >]
