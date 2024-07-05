@@ -2,6 +2,7 @@ const btn = document.querySelector('.menu_btn');
 
 btn.addEventListener('click', () => {
   btn.classList.toggle('open');
+  document.querySelector('.menu_container').classList.toggle('visibility');
   document.querySelector('.menu').classList.toggle('show_menu');
   document.querySelector('.overlay').classList.toggle('active');
   document.body.classList.toggle('no_scroll');

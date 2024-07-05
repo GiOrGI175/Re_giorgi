@@ -127,3 +127,11 @@ function updateCartInfo() {
   popup.appendChild(payBtn);
 }
 updateCartInfo();
+
+const payBtn = document.querySelector('.payBtn');
+
+payBtn.addEventListener('click', () => {
+  document.querySelector('.order').classList.add('show_order');
+  document.querySelector('.overlay').classList.toggle('active');
+  document.body.classList.toggle('no_scroll');
+});

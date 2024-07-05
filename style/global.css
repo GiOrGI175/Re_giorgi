@@ -378,13 +378,14 @@ body header .underline_container .underline {
   background-color: #fff;
 }
 body header .container {
+  max-width: 1110px;
+  margin: 0 auto;
   height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  padding-right: 0px 20px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -404,6 +405,10 @@ body header .container .menu_container {
   left: 0px;
   z-index: -1;
   overflow: hidden;
+  visibility: hidden;
+}
+body header .container .menu_container.visibility {
+  visibility: visible;
 }
 @media (max-width: 415px) {
   body header .container .menu_container {
@@ -457,7 +462,7 @@ body header .container .menu_container .menu nav ul li a img {
 }
 body header .container .popup_container {
   height: 50px;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 @media (max-width: 415px) {
   body header .container .popup_container {
@@ -2903,6 +2908,57 @@ body .card_Info .card_info_container .rowBox .cart_container .cart_info .payBtn 
   body .card_Info .card_info_container .rowBox .cart_container .cart_info .payBtn {
     max-width: 100%;
   }
+}
+body .order {
+  max-width: 534px;
+  height: 444px;
+  padding: 48px 45px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+body .order.show_order {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+body .order .imgBox {
+  margin-bottom: 33px;
+}
+body .order h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.1428571939px;
+  text-align: left;
+}
+body .order p {
+  margin-bottom: 80px;
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+}
+body .order button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  font-family: "Manrope";
+  color: #fff;
+  background-color: #d87d4a;
+  transition: all 0.5s ease-in-out;
+}
+body .order button:hover {
+  background-color: #fbaf85;
 }
 
 body footer .footer_container {
