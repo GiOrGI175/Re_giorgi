@@ -20,6 +20,7 @@ shoppingCartIcon.addEventListener('click', () => {
 let overlay = document.querySelector('.overlay');
 
 overlay.addEventListener('click', () => {
+  document.querySelector('.menu').classList.remove('show_menu');
   document.querySelector('.popup').classList.toggle('show');
   document.querySelector('.overlay').classList.toggle('active');
   document.body.classList.toggle('no_scroll');
