@@ -433,6 +433,13 @@ body {
                       top: -23px;
                       left: 87px;
                       z-index: 1;
+
+                      @media (max-width: $l-tablet) {
+                        left: -100px;
+                      }
+                      @media (max-width: $phone) {
+                        left: -100px;
+                      }
                     }
                     .backimg2 {
                       width: 130px;
