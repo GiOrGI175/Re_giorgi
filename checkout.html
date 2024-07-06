@@ -79,7 +79,7 @@
           <div class="valaidation_container">
             <div class="valaidation">
               <h2>CHECKOUT</h2>
-              <form>
+              <form id="myForm">
                 <div class="billing_details_container">
                   <h3>BILLING DETAILS</h3>
                   <div class="input_continer_1">
@@ -142,16 +142,16 @@
                     </div>
                     <div class="card_numbers">
                       <div>
-                        <span>4234</span>
+                        <span id="span1"></span>
                       </div>
                       <div>
-                        <span>2342</span>
+                        <span id="span2"></span>
                       </div>
                       <div>
-                        <span>2343</span>
+                        <span id="span3"></span>
                       </div>
                       <div>
-                        <span>2344</span>
+                        <span id="span4"></span>
                       </div>
                     </div>
                     <div class="holder">
@@ -167,7 +167,12 @@
                   <div class="payment_input_container">
                     <div class="Cardholder">
                       <input type="text" placeholder="Cardholder Name" />
-                      <input type="text" placeholder="Card Number" />
+                      <input
+                        type="number"
+                        id="cardnumber"
+                        maxlength="16"
+                        placeholder="Card Number"
+                      />
                     </div>
                     <div class="rowBox_3">
                       <div>
@@ -179,6 +184,7 @@
                     </div>
                   </div>
                 </div>
+                <button type="submit"></button>
               </form>
             </div>
           </div>

@@ -135,3 +135,61 @@ payBtn.addEventListener('click', () => {
   document.querySelector('.overlay').classList.toggle('active');
   document.body.classList.toggle('no_scroll');
 });
+
+const forms = document.getElementById('myForm');
+
+console.log(forms);
+
+forms.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let inputs = document.getElementsByTagName('input');
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = '';
+  }
+
+  console.log('ki');
+});
+
+let cardnumber = document.getElementById('cardnumber');
+
+cardnumber.addEventListener('keydown', () => {
+  console.log(cardnumber.value);
+
+  let arr = Array.from(cardnumber.value);
+
+  console.log(arr);
+
+  let firstspanNum = arr.slice(0, 4);
+
+  let firstNumArr = firstspanNum.join('');
+
+  let span1 = document.getElementById('span1');
+  span1.textContent = firstNumArr;
+
+  console.log(arr);
+  console.log(firstspanNum);
+  console.log(firstNumArr);
+
+  let secondspanNum = arr.slice(4, 8);
+
+  let secondNumArr = secondspanNum.join('');
+
+  let span2 = document.getElementById('span2');
+  span2.textContent = secondNumArr;
+
+  let thredpanNum = arr.slice(8, 12);
+
+  let thredNumArr = thredpanNum.join('');
+
+  let span3 = document.getElementById('span3');
+  span3.textContent = thredNumArr;
+
+  let fourthanNum = arr.slice(12, 16);
+
+  let fourthNumArr = fourthanNum.join('');
+
+  let span4 = document.getElementById('span4');
+  span4.textContent = fourthNumArr;
+});
