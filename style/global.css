@@ -2610,12 +2610,7 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
 }
 @media (max-width: 850px) {
   body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .linesBox .backimg {
-    left: -100px;
-  }
-}
-@media (max-width: 720px) {
-  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .linesBox .backimg {
-    left: -100px;
+    left: 50px;
   }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .linesBox .backimg2 {
@@ -2627,6 +2622,11 @@ body .card_Info .card_info_container .rowBox .valaidation_container .valaidation
   top: -23px;
   left: 128px;
   z-index: 1;
+}
+@media (max-width: 850px) {
+  body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .linesBox .backimg2 {
+    left: 100px;
+  }
 }
 body .card_Info .card_info_container .rowBox .valaidation_container .valaidation form .payment_container .banck_card .card_head {
   margin-bottom: 52px;
